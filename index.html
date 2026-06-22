@@ -244,6 +244,87 @@ pointer-events:none;
 z-index:-1;
 }
 
+/* WELCOME NOTIFICATION */
+
+.welcome-toast{
+position:fixed;
+top:95px;
+left:20px;
+
+width:min(340px,90%);
+padding:16px 18px;
+
+display:flex;
+align-items:flex-start;
+gap:12px;
+
+background:rgba(255,255,255,.92);
+backdrop-filter:blur(10px);
+
+border-right:4px solid #0B5D3B;
+border-radius:18px;
+
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+z-index:3000;
+
+animation:
+slideIn .8s ease,
+fadeOut .8s ease 7s forwards;
+}
+
+.welcome-toast i{
+font-size:20px;
+color:#0B5D3B;
+margin-top:2px;
+}
+
+.welcome-toast p{
+font-family:"Times New Roman",serif;
+font-size:14px;
+line-height:1.8;
+color:#355a47;
+margin:0;
+}
+
+/* الحركة */
+
+@keyframes slideIn{
+
+from{
+opacity:0;
+transform:translateX(-50px);
+}
+
+to{
+opacity:1;
+transform:translateX(0);
+}
+
+}
+
+@keyframes fadeOut{
+
+to{
+opacity:0;
+visibility:hidden;
+}
+
+}
+
+/* للجوال */
+
+@media (max-width:600px){
+
+.welcome-toast{
+left:50%;
+transform:translateX(-50%);
+width:90%;
+top:90px;
+}
+
+}
+
 /* HEADER */
 
 header{
@@ -727,6 +808,15 @@ letter-spacing:.5px;
 
 </header>
 
+<div class="welcome-toast">
+
+<i class="fa-solid fa-circle-info"></i>
+
+<p>
+صُممت هذه الصفحة لتكون مرجعًا سريعًا للإجابة عن أكثر الأسئلة شيوعًا المتعلقة بكلية علوم الأرض.
+</p>
+
+</div>
 
 <!-- SIDEBAR -->
 

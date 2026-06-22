@@ -318,13 +318,17 @@ color:#2f2f2f;
 }
 
 .about-text{
-width:calc(100% - 450px);
+width:clamp(55%,65vw,75%);
+max-width:780px;
+
 text-align:right;
 padding-right:clamp(15px,4vw,40px);
+
 position:relative;
-text-align:right;
-padding:40px;
+right:30px;
+
 margin-top:-200px;
+
 z-index:15;
 }
 
@@ -348,10 +352,9 @@ font-weight:500;
 /* WHY EARTH SCIENCES */
 
 .earth-section{
-max-width:1200px;
-margin:80px auto;
-padding:0 20px;
-text-align:center;
+width:min(1200px,90%);
+margin:50px auto;
+text-align:right;
 clear:both;
 }
 
@@ -363,26 +366,21 @@ margin-bottom:25px;
 }
 
 .earth-intro{
-max-width:900px;
-margin:auto;
+width:100%;
 font-size:clamp(15px,1.5vw,18px);
-line-height:2.3;
+line-height:2.4;
 color:#444;
-margin-bottom:45px;
+margin-bottom:50px;
 }
 
 .reasons-container{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 gap:25px;
 }
 
 .reason-card{
-.reason-card{
-width:min(350px,100%);
-}
-background:rgba(255,255,255,.65);
+background:rgba(255,255,255,.7);
 backdrop-filter:blur(10px);
 border:1px solid rgba(11,93,59,.12);
 border-radius:25px;
@@ -564,6 +562,10 @@ onclick="toggleDepartments()"></i>
 <p>
 تُعد كلية علوم الأرض من أقدم المؤسسات التعليمية المتخصصة في علوم الجيولوجيا التطبيقية بالمملكة العربية السعودية، حيث تأسست عام 1390هـ (1970م) كمركز للجيولوجيا التطبيقية بهدف تأهيل الجيولوجيين السعوديين في مجالات الجيولوجيا الحقلية واستكشاف الثروات المعدنية. وانضمت لاحقًا إلى جامعة الملك عبدالعزيز لتصبح كلية علوم الأرض عام 1398هـ (1978م). وتتميز الكلية ببرامجها الأكاديمية المتطورة ومكانتها العلمية المرموقة، إذ كانت من أوائل الكليات في المملكة التي طرحت برامج الماجستير والدكتوراه. كما تنفرد على مستوى المملكة والعالم العربي بتقديم برامج البكالوريوس في عدد من التخصصات التطبيقية في علوم الأرض، مما يسهم في إعداد كوادر وطنية مؤهلة لدعم التنمية المستدامة وتحقيق مستهدفات رؤية المملكة 2030.
 </p>
+</section>
+
+<section class="earth-section">
+
 <h1 class="earth-title">
 لماذا دراسة علوم الأرض؟
 </h1>
@@ -584,7 +586,7 @@ onclick="toggleDepartments()"></i>
 <div class="reason-card">
 <h2>فرص وظيفية واعدة</h2>
 <p>
-يتمتع خريجو علوم الأرض بفرص وظيفية متميزة في قطاعات التعدين والطاقة والمياه والبيئة والهندسة، في كل من القطاعين الحكومي والخاص.
+يتمتع خريجو علوم الأرض بفرص وظيفية متميزة في قطاعات التعدين والطاقة والمياه والبيئة والهندسة، في القطاعين الحكومي والخاص.
 </p>
 </div>
 
@@ -598,14 +600,14 @@ onclick="toggleDepartments()"></i>
 <div class="reason-card">
 <h2>استخدام التقنيات الحديثة</h2>
 <p>
-يعتمد التخصص على تقنيات متقدمة مثل نظم المعلومات الجغرافية (GIS)، والاستشعار عن بعد، والتحليل الرقمي، مما يواكب التطورات العلمية والتقنية الحديثة.
+يعتمد التخصص على تقنيات متقدمة مثل نظم المعلومات الجغرافية (GIS) والاستشعار عن بعد والتحليل الرقمي، بما يواكب التطورات العلمية الحديثة.
 </p>
 </div>
 
 <div class="reason-card">
 <h2>العمل الميداني والبحث العلمي</h2>
 <p>
-يجمع التخصص بين العمل الميداني والدراسة المعملية والبحث العلمي، مما يمنح الطلبة خبرات عملية متنوعة ومهارات تطبيقية متميزة.
+يجمع التخصص بين العمل الميداني والدراسة المعملية والبحث العلمي، مما يمنح الطلبة خبرات عملية ومهارات تطبيقية متميزة.
 </p>
 </div>
 
@@ -617,6 +619,7 @@ onclick="toggleDepartments()"></i>
 </div>
 
 </div>
+
 </section>
 
 

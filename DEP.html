@@ -468,22 +468,66 @@ margin-bottom:20px;
 }
 
 .department-card{
-width:min(180px,100%);
-min-height:160px;
+width:clamp(140px,16vw,180px);
+min-height:clamp(140px,18vw,200px);
 background:rgba(237,248,238,.9);
 border:1px solid rgba(11,93,59,.12);
 border-radius:24px;
-padding:12px 12px;
+padding:15px;
+
 display:flex;
 flex-direction:column;
-justify-content:flex-start;
+justify-content:center;
 align-items:center;
+
 text-decoration:none;
 text-align:center;
+
 box-shadow:0 6px 18px rgba(0,0,0,.06);
 transition:.3s;
 }
 
+/* قسم الجيولوجيا الهندسية والبيئية */
+.card-envi{
+width:clamp(105px,13vw,140px);
+min-height:clamp(105px,13vw,140px);
+}
+
+/* قسم جيولوجيا البترول والترسبات */
+.card-petro{
+width:clamp(105px,13vw,140px);
+min-height:clamp(105px,13vw,140px);
+}
+
+/* قسم الجيوفيزياء */
+.card-geophy{
+width:clamp(100px,12vw,135px);
+min-height:clamp(100px,12vw,135px);
+}
+
+/* قسم الثروة المعدنية والصخور */
+.card-minrok{
+width:clamp(115px,14vw,155px);
+min-height:clamp(115px,14vw,155px);
+}
+
+/* قسم تقنيات الاستكشاف الجيولوجي */
+.card-expl{
+width:clamp(105px,13vw,140px);
+min-height:clamp(105px,13vw,140px);
+}
+
+/* قسم الجيولوجيا البنائية والاستشعار عن بعد */
+.card-struc{
+width:clamp(125px,15vw,170px);
+min-height:clamp(125px,15vw,170px);
+}
+
+/* قسم جيولوجيا المياه */
+.card-hydro{
+width:clamp(105px,13vw,140px);
+min-height:clamp(105px,13vw,140px);
+}
 .department-card:hover{
 transform:translateY(-8px);
 background:#e5f3e7;
@@ -494,15 +538,18 @@ box-shadow:0 12px 25px rgba(0,0,0,.1);
 font-family:"Times New Roman",serif;
 font-size:clamp(14px,1.6vw,18px);
 color:#0B5D3B;
-line-height:1.6;
-margin-bottom:2px;
+line-height:1.2;
+margin-bottom:0;
 }
 
 .department-card img{
-width:clamp(45px,6vw,65px);
-height:clamp(45px,6vw,65px);
+width:75%;
+height:auto;
+
 object-fit:contain;
 display:block;
+
+margin-top:4px;
 }
 
 /* FOOTER */
@@ -646,47 +693,47 @@ onclick="toggleDepartments()"></i>
 
 <div class="departments-row">
 
-<a href="ENVI.html" class="department-card">
+<a href="ENVI.html" class="department-card card-envi">
 <h2>قسم الجيولوجيا الهندسية والبيئية</h2>
-<img src="economic.png">
+<img src="ENVI.png">
 </a>
 
-<a href="PTRO.html" class="department-card">
+<a href="PTRO.html" class="department-card card-petro">
 <h2>قسم جيولوجيا البترول والترسبات</h2>
-<img src="engineering.png">
+<img src="PETRO.png">
 </a>
 
-<a href="GEPHY.html" class="department-card">
+<a href="GEPHY.html" class="department-card card-geophy">
 <h2>قسم الجيوفيزياء</h2>
-<img src="water.png">
+<img src="GEPHY.png">
 </a>
 
 </div>
 
 <div class="departments-center">
 
-<a href="MINROK.html" class="department-card">
+<a href="MINROK.html" class="department-card card-minrok">
 <h2>قسم الثروة المعدنية والصخور</h2>
-<img src="petroleum.png">
+<img src="MINROK.png">
 </a>
 
 </div>
 
 <div class="departments-row">
 
-<a href="EXPL.html" class="department-card">
+<a href="MINROK.html" class="department-card card-minrok">
 <h2>قسم تقنية الاستكشاف الجيولوجي</h2>
-<img src="geophysics.png">
+<img src="EXPL.png">
 </a>
 
-<a href="STRUC.html" class="department-card">
+<a href="STRUC.html" class="department-card card-struc">
 <h2>قسم الجيولوجيا البنائية والاستشعار عن بُعد</h2>
-<img src="minerals.png">
+<img src="STRUC.png">
 </a>
 
-<a href="HYDRO.html" class="department-card">
+<a href="HYDRO.html" class="department-card card-hydro">
 <h2>قسم جيولوجيا المياه</h2>
-<img src="structural.png">
+<img src="HYDRO.png">
 </a>
 
 </div></div>
