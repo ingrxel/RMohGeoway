@@ -477,6 +477,10 @@ margin:auto;
 padding:0 20px;
 }
 
+.employment-grid:first-of-type{
+margin-bottom:12px;
+}
+
 .employment-card{
 background:rgba(255,255,255,.72);
 backdrop-filter:blur(10px);
@@ -485,6 +489,9 @@ border-radius:25px;
 padding:24px;
 box-shadow:0 8px 20px rgba(0,0,0,.05);
 transition:.3s;
+display:flex;
+flex-direction:column;
+height:100%;
 }
 
 .employment-card:hover{
@@ -499,14 +506,23 @@ margin-bottom:12px;
 text-align:center;
 }
 
+.department-description{
+font-family:"Times New Roman",serif;
+font-size:13px;
+line-height:1.9;
+color:#555;
+text-align:right;
+margin:2px 0 2px;
+padding:0 5px;
+}
+
 .job-fields{
 font-size:14px;
 color:#444;
 text-align:right;
-margin-bottom:12px;
+margin-bottom:1px;
 display:flex;
 flex-direction:column;
-gap:2px;
 }
 
 .job-fields span{
@@ -515,12 +531,14 @@ font-weight:700;
 display:block;
 line-height:1.8;
 }
+
 .company-title{
 font-family:"Times New Roman",serif;
 font-size:18px;
 color:#0B5D3B;
 text-align:center;
-margin-bottom:15px;
+margin-top:auto;
+margin-bottom:12px;
 }
 
 .company-grid{
@@ -553,11 +571,6 @@ background:white;
 width:70%;
 height:70%;
 object-fit:contain;
-}
-
-.second-row{
-max-width:900px;
-margin-top:25px;
 }
 
 /* STATISTICS SECTION */
@@ -712,9 +725,7 @@ letter-spacing:.5px;
 
 <div class="dropdown-btn">
 
-<a href="DEP.html">
-الأقــسام العــلميــة
-</a>
+<a href="DEP.html">الأقــسام العــلميــة</a>
 
 <i class="fa-solid fa-chevron-down"
 onclick="toggleDepartments()"></i>
@@ -731,7 +742,7 @@ onclick="toggleDepartments()"></i>
 
 <a href="MINROK.html">قسم الثروة المعدنية والصخور</a>
 
-<a href="#">قسم تقنية الاستكشاف الجيولوجي</a>
+<a href="#EXPL.html">قسم تقنية الاستكشاف الجيولوجي</a>
 
 <a href="SRTUC.html">قسم الجيولوجيا البنائية والاستشعار عن بُعد</a>
 
@@ -740,7 +751,7 @@ onclick="toggleDepartments()"></i>
 </div>
 
 </div><a href="#">الــرحلات الحــقــليــة</a>
-<a href="#">مجــالات الــتوظــيــف</a>
+<a href="EMPLY.html">مجـلات و إحصائيات الــتوظــيـف</a>
 <a href="#">الــسنة التــحضيــريــية</a>
 <a href="#">مــقررات الــكليــة</a>
 <a href="#">القــبـــول</a>
@@ -774,19 +785,22 @@ onclick="toggleDepartments()"></i>
 <div class="employment-grid">
 
 <div class="employment-card">
-<h2>قسم الجيولوجيا الهندسية والبيئية</h2>
+<h2>قطاع النفط والغاز والطاقة</h2>
+
+<p class="department-description">
+يهتم هذا القطاع بالبحث عن النفط والغاز الطبيعي واستكشافهما وتطوير الحقول وإدارة الموارد الطاقية، ويُعد من أهم القطاعات الاقتصادية في المملكة والعالم.</p>
 
 <div class="job-fields">
 
-<span>● شركات الهندسة والاستشارات</span>
+<span>● جيولوجي بترولي</span>
 
-<span>● مشاريع الطرق والجسور</span>
+<span>● جيولوجي مكامن</span>
 
-<span>● شركات المقاولات</span>
+<span>● جيوفيزيائي</span>
 
-<span>● الجهات البيئية</span>
+<span>● أخصائي بيانات جيولوجية</span>
 
-<span>● مشاريع البنية التحتية</span>
+<span>● أخصائي استكشاف</span>
 
 </div>
 
@@ -795,28 +809,36 @@ onclick="toggleDepartments()"></i>
 </div>
 
 <div class="company-grid">
-<a href="aramco.html" class="company-box"><img src="company1.png"></a>
-<a href="maaden.html" class="company-box"><img src="company2.png"></a>
-<a href="neom.html" class="company-box"><img src="company3.png"></a>
-<a href="sgs.html" class="company-box"><img src="company4.png"></a>
+<a href="#.html" class="company-box"><img src="ARAMCO.PNG"></a>
+<a href="#.html" class="company-box"><img src="SLB.PNG"></a>
+<a href="#.html" class="company-box"><img src="HLBRTN.PNG"></a>
+<a href="#.html" class="company-box"><img src="EXLOG.PNG"></a>
+<a href="#.html" class="company-box"><img src="MOE.PNG"></a>
+<a href="#.html" class="company-box"><img src="#.PNG"></a>
+<a href="#.html" class="company-box"><img src="#.PNG"></a>
+
 </div>
 </div>
 
 
 <div class="employment-card">
-<h2>قسم جيولوجيا البترول والترسبات</h2>
+<h2>قطاع التعدين والثروة المعدنية</h2>
+
+<p class="department-description">
+يركز على استكشاف وتقييم واستخراج الموارد المعدنية مثل الذهب والنحاس والزنك والفوسفات والمعادن الصناعية، ويعد من أسرع القطاعات نموًا في المملكة.
+</p>
 
 <div class="job-fields">
 
-<span>● شركات الهندسة والاستشارات</span>
+<span>● جيولوجي تعدين</span>
 
-<span>● مشاريع الطرق والجسور</span>
+<span>● جيولوجي استكشاف معدني</span>
 
-<span>● شركات المقاولات</span>
+<span>● مفتش مناجم ومحاجر</span>
 
-<span>● الجهات البيئية</span>
+<span>● أخصائي موارد معدنية</span>
 
-<span>● مشاريع البنية التحتية</span>
+<span>● أخصائي عينات وخامات</span>
 
 </div>
 
@@ -825,28 +847,33 @@ onclick="toggleDepartments()"></i>
 </div>
 
 <div class="company-grid">
-<a href="aramco.html" class="company-box"><img src="company5.png"></a>
-<a href="adnoc.html" class="company-box"><img src="company6.png"></a>
-<a href="slb.html" class="company-box"><img src="company7.png"></a>
-<a href="halliburton.html" class="company-box"><img src="company8.png"></a>
+<a href="#.html" class="company-box"><img src="MAADEN.PNG"></a>
+<a href="#.html" class="company-box"><img src="A&B.PNG"></a>
+<a href="#.html" class="company-box"><img src="MIMR.PNG"></a>
+<a href="#.html" class="company-box"><img src="SGS.PNG"></a>
+<a href="#.html" class="company-box"><img src="#.PNG"></a>
+<a href="#.html" class="company-box"><img src="#.PNG"></a>
+
 </div>
 </div>
 
 
 <div class="employment-card">
-<h2>قسم الجيوفيزياء</h2>
+<h2>قطاع المياه والموارد المائية</h2>
+
+<p class="department-description">
+يهتم بدراسة المياه الجوفية واستكشافها وتقييم جودتها وإدارتها للمحافظة على استدامة الموارد المائية.
+</p>
 
 <div class="job-fields">
 
-<span>● شركات الهندسة والاستشارات</span>
+<span>● هيدروجيولوجي</span>
 
-<span>● مشاريع الطرق والجسور</span>
+<span>● أخصائي موارد مائية</span>
 
-<span>● شركات المقاولات</span>
+<span>● أخصائي مياه جوفية</span>
 
-<span>● الجهات البيئية</span>
-
-<span>● مشاريع البنية التحتية</span>
+<span>● مستشار هيدروجيولوجي</span>
 
 </div>
 
@@ -855,28 +882,30 @@ onclick="toggleDepartments()"></i>
 </div>
 
 <div class="company-grid">
-<a href="aramco.html" class="company-box"><img src="company9.png"></a>
-<a href="sgs.html" class="company-box"><img src="company10.png"></a>
-<a href="halliburton.html" class="company-box"><img src="company11.png"></a>
-<a href="slb.html" class="company-box"><img src="company12.png"></a>
+<a href="#.html" class="company-box"><img src="MEWA.PNG"></a>
+<a href="#.html" class="company-box"><img src="company10.png"></a>
+<a href="#.html" class="company-box"><img src="company11.png"></a>
+<a href="#.html" class="company-box"><img src="company12.png"></a>
 </div>
 </div>
 
 
 <div class="employment-card">
-<h2>قسم الثروة المعدنية والصخور</h2>
+<h2>قطاع البيئة والاستدامة</h2>
+
+<p class="department-description">
+يهتم بحماية البيئة وإدارة الموارد الطبيعية وتقييم الآثار البيئية للمشروعات المختلفة.
+</p>
 
 <div class="job-fields">
 
-<span>● شركات الهندسة والاستشارات</span>
+<span>● جيولوجي بيئي</span>
 
-<span>● مشاريع الطرق والجسور</span>
+<span>● أخصائي تقييم بيئي</span>
 
-<span>● شركات المقاولات</span>
+<span>● أخصائي استدامة</span>
 
-<span>● الجهات البيئية</span>
-
-<span>● مشاريع البنية التحتية</span>
+<span>● مستشار بيئي</span>
 
 </div>
 
@@ -885,30 +914,31 @@ onclick="toggleDepartments()"></i>
 </div>
 
 <div class="company-grid">
-<a href="maaden.html" class="company-box"><img src="company13.png"></a>
-<a href="sgs.html" class="company-box"><img src="company14.png"></a>
-<a href="ministry.html" class="company-box"><img src="company15.png"></a>
-<a href="cement.html" class="company-box"><img src="company16.png"></a>
+<a href="#.html" class="company-box"><img src="company13.png"></a>
+<a href="#.html" class="company-box"><img src="company15.png"></a>
+<a href="#.html" class="company-box"><img src="company16.png"></a>
 </div>
 </div>
 </div>
 
-<div class="employment-grid second-row">
+<div class="employment-grid">
 
 <div class="employment-card">
-<h2>قسم تقنية الاستكشاف الجيولوجي</h2>
+<h2>نظم المعلومات الجغرافية والاستشعار عن بعد</h2>
+
+<p class="department-description">
+يعتمد هذا المجال على استخدام الأقمار الصناعية والخرائط الرقمية وتحليل البيانات المكانية لدعم التخطيط واتخاذ القرار.
+</p>
 
 <div class="job-fields">
 
-<span>● شركات الهندسة والاستشارات</span>
+<span>● أخصائي GIS</span>
 
-<span>● مشاريع الطرق والجسور</span>
+<span>● أخصائي استشعار عن بعد</span>
 
-<span>● شركات المقاولات</span>
+<span>● محلل بيانات مكانية</span>
 
-<span>● الجهات البيئية</span>
-
-<span>● مشاريع البنية التحتية</span>
+<span>● أخصائي خرائط رقمية</span>
 
 </div>
 
@@ -917,58 +947,30 @@ onclick="toggleDepartments()"></i>
 </div>
 
 <div class="company-grid">
-<a href="aramco.html" class="company-box"><img src="company17.png"></a>
-<a href="maaden.html" class="company-box"><img src="company18.png"></a>
-<a href="slb.html" class="company-box"><img src="company19.png"></a>
-<a href="sgs.html" class="company-box"><img src="company20.png"></a>
-</div>
-</div>
-
-
-<div class="employment-card">
-<h2>قسم الجيولوجيا البنائية والاستشعار عن بُعد</h2>
-
-<div class="job-fields">
-
-<span>● شركات الهندسة والاستشارات</span>
-
-<span>● مشاريع الطرق والجسور</span>
-
-<span>● شركات المقاولات</span>
-
-<span>● الجهات البيئية</span>
-
-<span>● مشاريع البنية التحتية</span>
-
-</div>
-
-<div class="company-title">
-جهات التوظيف
-</div>
-
-<div class="company-grid">
-<a href="esri.html" class="company-box"><img src="company21.png"></a>
-<a href="neom.html" class="company-box"><img src="company22.png"></a>
-<a href="sgs.html" class="company-box"><img src="company23.png"></a>
-<a href="ministry.html" class="company-box"><img src="company24.png"></a>
+<a href="#.html" class="company-box"><img src="company17.png"></a>
+<a href="#.html" class="company-box"><img src="company18.png"></a>
+<a href="#.html" class="company-box"><img src="company19.png"></a>
+<a href="#.html" class="company-box"><img src="company20.png"></a>
 </div>
 </div>
 
 
 <div class="employment-card">
-<h2>قسم جيولوجيا المياه</h2>
+<h2>قطاع الهندسة والبنية التحتية</h2>
+
+<p class="department-description">
+يهتم بدراسة خصائص التربة والصخور لضمان سلامة المشروعات الهندسية والمنشآت الكبرى.
+</p>
 
 <div class="job-fields">
 
-<span>● شركات الهندسة والاستشارات</span>
+<span>● جيولوجي هندسي</span>
 
-<span>● مشاريع الطرق والجسور</span>
+<span>● أخصائي مواقع</span>
 
-<span>● شركات المقاولات</span>
+<span>● مستشار جيولوجي للمشروعات</span>
 
-<span>● الجهات البيئية</span>
-
-<span>● مشاريع البنية التحتية</span>
+<span>● أخصائي مخاطر جيولوجية</span>
 
 </div>
 
@@ -977,13 +979,91 @@ onclick="toggleDepartments()"></i>
 </div>
 
 <div class="company-grid">
-<a href="nwc.html" class="company-box"><img src="company25.png"></a>
-<a href="swcc.html" class="company-box"><img src="company26.png"></a>
-<a href="ministry.html" class="company-box"><img src="company27.png"></a>
-<a href="sgs.html" class="company-box"><img src="company28.png"></a>
+<a href="#.html" class="company-box"><img src="RR.PNG"></a>
+<a href="#.html" class="company-box"><img src="MBCC.PNG"></a>
+<a href="#.html" class="company-box"><img src="company23.png"></a>
+<a href="#.html" class="company-box"><img src="company24.png"></a>
 </div>
 </div>
 
+
+<div class="employment-card">
+<h2>البحث العلمي والأكاديمي</h2>
+
+<p class="department-description">
+اكتبي هنا نبذة مختصرة عن القسم أو التخصص.
+</p>
+
+<div class="job-fields">
+
+<span>● باحث علمي</span>
+
+<span>● عضو هيئة تدريس</span>
+
+<span>● معيد</span>
+
+<span>● أخصائي مختبرات بحثية</span>
+
+</div>
+
+<div class="company-title">
+جهات التوظيف
+</div>
+
+<div class="company-grid">
+<a href="#.html" class="company-box"><img src="KACST.PNG"></a>
+<a href="#.html" class="company-box"><img src="ME.PNG"></a>
+<a href="#.html" class="company-box"><img src="company27.png"></a>
+<a href="#.html" class="company-box"><img src="company28.png"></a>
+</div>
+</div>
+
+<div class="employment-card">
+<h2>القطاع الحكومي والعسكري</h2>
+
+<p class="department-description">
+تشمل فرص العمل العديد من الجهات الحكومية والعسكرية التي تحتاج إلى متخصصين في الجيولوجيا والموارد الطبيعية ونظم المعلومات الجغرافية والاستشعار عن بعد.
+</p>
+
+<div class="job-fields">
+
+<span>● ضابط أو موظف فني في الجهات العسكرية ذات العلاقة بالمساحة والخرائط</span>
+
+<span>● معلم أو محاضر أكاديمي</span>
+
+<span>● محلل بيانات مكانية</span>
+
+<span>● مفتش موارد طبيعية</span>
+
+<span>● باحث علمي</span>
+
+<span>● أخصائي استشعار عن بعد</span>
+
+<span>● أخصائي GIS</span>
+
+<span>● جيولوجي</span>
+
+</div>
+
+<div class="company-title">
+جهات التوظيف
+</div>
+
+<div class="company-grid">
+<a href="#.html" class="company-box"><img src="MOE.PNG"></a>
+<a href="#.html" class="company-box"><img src="MIMR.PNG"></a>
+<a href="#.html" class="company-box"><img src="MEWA.PNG"></a>
+<a href="#.html" class="company-box"><img src="ME.PNG"></a>
+<a href="#.html" class="company-box"><img src="SGS.PNG"></a>
+<a href="#.html" class="company-box"><img src="ME.PNG"></a>
+<a href="#.html" class="company-box"><img src="#.PNG"></a>
+<a href="#.html" class="company-box"><img src="#.PNG"></a>
+<a href="#.html" class="company-box"><img src="#.PNG"></a>
+<a href="#.html" class="company-box"><img src="#.PNG"></a>
+<a href="#.html" class="company-box"><img src="#.PNG"></a>
+
+</div>
+</div>
 </div>
 
 
