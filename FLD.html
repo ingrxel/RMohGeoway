@@ -23,17 +23,14 @@ body{
 background:#f8f9fb;
 overflow-x:hidden;
 }
-
-
 .content{
-padding-top:0px;
+padding-top:0;
 padding-bottom:80px;
-
 position:relative;
-margin-top:-40vh;
+margin-top:0;
 z-index:5;
-
 }
+
 .content,
 .hero-content,
 footer{
@@ -239,17 +236,13 @@ background:#f3f3f3;
 /* HERO */
 
 .field-hero{
-min-height:clamp(500px,70vh,750px);
 display:flex;
 justify-content:center;
 align-items:center;
 position:relative;
-overflow:hidden;
 
-padding-top:120px;
-padding-right:%;
-padding-bottom:0;
-padding-left:0;
+padding-top:95px; /* يبدأ مباشرة بعد الهيدر */
+padding-bottom:20px;
 }
 
 body::before{
@@ -267,7 +260,7 @@ linear-gradient(
 to left,
 
 #f8f9fb 0%,
-#f8f9fb 45%,
+#f8f9fb 0%,
 rgba(248,249,251,.98) 58%,
 rgba(248,249,251,.9) 70%,
 rgba(248,249,251,.75) 82%,
@@ -301,7 +294,7 @@ mask-image:
 linear-gradient(
 to left,
 transparent 0%,
-black 25%,
+black 0%,
 black 100%
 );
 
@@ -309,7 +302,7 @@ black 100%
 linear-gradient(
 to left,
 transparent 0%,
-black 20%,
+black 15%,
 black 100%
 );
 }
@@ -329,35 +322,25 @@ border-radius:0;
 /* تحسين تمركز النص */
 
 .hero-content{
-position:relative;
-z-index:2;
-
 display:flex;
 flex-direction:column;
-justify-content:center;
 align-items:center;
-
 text-align:center;
 
 width:min(90%,700px);
 
-padding-inline:20px;
-
-transform:translateY(-200px);
+gap:8px;
 }
 
 /* عنوان الصفحة */
 
 .hero-content h1{
 font-family:"Times New Roman",serif;
-font-size:clamp(40px,5vw,65px);
+font-size:clamp(34px,4vw,50px);
 font-weight:700;
-
 color:#0B5D3B;
 
-margin-bottom:15px;
-
-text-shadow:0 2px 8px rgba(255,255,255,.4);
+margin:0;
 }
 
 /* الوصف */
@@ -365,7 +348,7 @@ text-shadow:0 2px 8px rgba(255,255,255,.4);
 .hero-content p{
 font-family:"Arial",sans-serif;
 
-font-size:clamp(15px,1.6vw,20px);
+font-size:clamp(12px,1.5vw,18px);
 
 color:#4b4b4b;
 
@@ -389,11 +372,13 @@ transform:scale(1.02);
 }
 
 /* SECTIONS */
+
 .section-title{
 text-align:center;
-font-size:38px;
+font-size:clamp(34px,4vw,50px);
 color:#0B5D3B;
-margin:70px 0 25px;
+font-family:"Times New Roman",serif;
+margin:20px 0;
 }
 
 .glass-box{
@@ -409,20 +394,27 @@ line-height:2.2;
 /* IMPORTANCE */
 .importance-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(2, 1fr);
 gap:20px;
-width:min(1200px,92%);
+width:min(800px,92%);
 margin:40px auto;
 }
 
 .importance-card{
-padding:30px;
+padding:20px 25px;
 text-align:center;
 border-radius:25px;
 background:rgba(255,255,255,.7);
 transition:.3s;
-}
 
+display:flex;
+justify-content:center;
+align-items:center;
+
+min-height:90px;
+font-size:clamp(14px,1.3vw,18px);
+line-height:1.8;
+}
 .importance-card:hover{transform:translateY(-6px);}
 
 /* TRIPS */
@@ -443,25 +435,38 @@ background:rgba(11,93,59,.08);
 }
 
 /* TOOLS */
+
 .tools-line{
 display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:35px;
-padding:35px;
-border-top:8px solid #c9e4cf;
+flex-wrap:nowrap; /* يمنع النزول لسطر جديد */
+justify-content:space-between;
+align-items:flex-start;
+
+gap:15px;
+padding:35px 10px;
+
 width:min(1200px,95%);
 margin:auto;
+overflow:hidden;
 }
 
-.tool{text-align:center;}
+.tool{
+flex:1;
+min-width:0;
+text-align:center;
+}
+
 .tool img{
-width:110px;
-height:110px;
+width:clamp(50px,6vw,110px);
+height:clamp(50px,6vw,110px);
 object-fit:cover;
 border-radius:50%;
 }
 
+.tool p{
+font-size:clamp(10px,1vw,16px);
+margin-top:8px;
+}
 /* REQUIREMENTS */
 .requirements{
 width:min(900px,92%);
@@ -657,10 +662,9 @@ onclick="toggleDepartments()"></i>
 
 <div class="content">
 
-<h2 class="section-title">
 <h2 class="section-title">نبذة عن الرحلات الحقلية</h2>
 <div class="glass-box">
-تعد الرحلات الحقلية من أهم مميزات الدراسة...
+تعد الرحلات الحقلية من أهم مميزات الدراسة في كلية علوم الأرض، حيث ينتقل الطالب من دراسة المفاهيم داخل القاعات الدراسية إلى تطبيقها عمليًا في المواقع الجيولوجية الحقيقية. كما تسهم هذه الرحلات في تنمية مهارات الملاحظة والتحليل والعمل الميداني التي يحتاجها الجيولوجي في حياته المهنية.
 </div>
 
 <h2 class="section-title">أهمية الرحلات الحقلية</h2>
@@ -679,7 +683,7 @@ onclick="toggleDepartments()"></i>
 
 <div class="trip-card" onclick="openPopup('استخدام الخرائط - تتبع الطبقات - GIS')">رحلة الخرائط الجيولوجية</div>
 
-<div class="trip-card" onclick="openPopup('زيارات ميدانية قصيرة خلال الفصل الدراسي.')">الزيارات الميدانية الأخرى</div>
+<div class="trip-card" onclick="openPopup('تتضمن بعض المقررات زيارات ورحلات ميدانية قصيرة خلال الفصل الدراسي، تستغرق عادة عدة ساعات أثناء الدوام الجامعي، وتهدف إلى مشاهدة الظواهر الجيولوجية المختلفة وتطبيق المفاهيم التي يتم دراستها داخل القاعات الدراسية.')">الزيارات الميدانية الأخرى</div>
 </div>
 
 <h2 class="section-title">الأدوات الحقلية</h2>
@@ -708,8 +712,7 @@ onclick="toggleDepartments()"></i>
 </a>
 
 <div class="glass-box">
-تمنح الرحلات الحقلية الطالب فرصة التعلم من الطبيعة مباشرة...
-</div>
+تمنح الرحلات الحقلية الطالب فرصة التعلم من الطبيعة مباشرة، واكتساب خبرة عملية في التعرف على الصخور والمعادن ورسم الخرائط الجيولوجية وتحليل البيانات الميدانية، مما يجعلها من أكثر التجارب التعليمية تميزًا في كلية علوم الأرض.</div>
 
 <div class="popup" id="popup">
 <div class="popup-box">
