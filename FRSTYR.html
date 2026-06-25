@@ -473,7 +473,7 @@ text-align:center;
 font-size:clamp(30px,4vw,42px);
 font-family:"Times New Roman",serif;
 color:#0B5D3B;
-margin:80px 0 35px;
+margin:45px 0 35px;
 }
 
 /* ================= GLASS BOX ================= */
@@ -482,6 +482,7 @@ margin:80px 0 35px;
 width:min(1200px,92%);
 margin:auto;
 padding:45px;
+margin-top:clamp(-40px,-6vw,-60px);
 border-radius:35px;
 background:rgba(255,255,255,.45);
 backdrop-filter:blur(12px);
@@ -496,31 +497,20 @@ color:#444;
 
 .journey-map{
 width:min(1200px,92%);
-
-
+overflow:hidden;
 margin:auto;
-
 padding:clamp(20px,3vw,40px);
-
 border-radius:40px;
-
-background:rgba(255,255,255,.35);
-
+background:rgba(185,220,198,.15);
 backdrop-filter:blur(12px);
-
 border:1px solid rgba(255,255,255,.4);
-
 box-shadow:0 10px 35px rgba(0,0,0,.06);
-
 display:grid;
-
 grid-template-columns:1fr 1fr;
-
 grid-template-rows:auto auto;
 grid-template-areas:
 "first empty"
 "arrow second";
-
 grid-template-rows:auto auto;
 gap:clamp(5px,1vw,15px);align-items:center;
 min-height:800px;
@@ -531,29 +521,19 @@ height:auto;
 
 .year-box{
 width:min(100%,500px);
-
 padding:clamp(15px,2vw,40px);
-
 background:rgba(255,255,255,.85);
-
 border-radius:30px;
-
 box-shadow:0 8px 25px rgba(0,0,0,.06);
-
 overflow:hidden;
 }
 
 .year-one-group{
 grid-area:first;
-
 justify-self:start;
-
 display:flex;
-
 flex-direction:column;
-
 align-items:flex-start;
-
 max-width:100%;
 }
 
@@ -563,11 +543,8 @@ position:static;
 
 .journey-road{
 grid-area:arrow;
-
 justify-self:center;
-
 align-self:center;
-
 width:min(100%,420px);
 }
 
@@ -579,10 +556,8 @@ object-fit:contain;
 
 .journey-image{
 grid-area:empty;
-
 width:100%;
 height:100%;
-
 display:flex;
 justify-content:center;
 align-items:flex-start;
@@ -598,15 +573,11 @@ object-fit:contain;
 
 .year-two{
 grid-area:second;
-
 justify-self:end;
-
 align-self:center;
-
 width:100%;
-
 max-width:100%;
-
+transform:translateX(5px);
 margin-top:clamp(-350px,-28vw,-500px);
 }
 
@@ -630,52 +601,255 @@ line-height:1.8;
 margin:8px 0;
 }
 
+.year-buttons{
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+.year-btn{
+width:100%;
+padding:16px 20px;
+border:none;
+border-radius:18px;
+background:rgba(11,93,59,.08);
+color:#0B5D3B;
+font-size:clamp(14px,1.4vw,18px);
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+text-align:right;
+}
+
+.year-btn:hover{
+background:#0B5D3B;
+color:white;
+transform:translateX(-8px);
+}
+
+.modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.5);
+z-index:5000;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+.modal-box{
+width:min(700px,100%);
+background:white;
+border-radius:30px;
+padding:40px;
+position:relative;
+max-height:85vh;
+overflow-y:auto;
+}
+
+.close-modal{
+position:absolute;
+top:20px;
+left:25px;
+font-size:28px;
+cursor:pointer;
+color:#0B5D3B;
+}
+
+.modal-box h2{
+text-align:center;
+margin-bottom:25px;
+color:#0B5D3B;
+font-family:"Times New Roman",serif;
+}
+
+.modal-content{
+line-height:2;
+font-size:18px;
+color:#444;
+}
+
+.modal-link-btn{
+display:block;
+width:fit-content;
+margin:30px auto 0;
+padding:14px 30px;
+background:#0B5D3B;
+color:white;
+text-decoration:none;
+border-radius:15px;
+font-size:16px;
+font-weight:600;
+text-align:center;
+box-shadow:0 6px 18px rgba(11,93,59,.25);
+}
+
+.modal-link-btn:hover{
+background:#08472d;
+transform:translateY(-3px);
+box-shadow:0 8px 22px rgba(11,93,59,.35);
+}
 
 /* ================= SUPPORT ================= */
 
 .support-box{
-width:min(1200px,92%);
+width:100%;
 margin:auto;
 padding:40px;
 border-radius:35px;
-background:rgba(255,255,255,.45);
+background:rgba(255,255,255,.70);
 backdrop-filter:blur(12px);
 border:1px solid rgba(255,255,255,.5);
 }
 
 .support-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+grid-template-columns:repeat(12,1fr);
 gap:20px;
 }
-
-.support-grid div{
-padding:25px;
-background:white;
-border-radius:20px;
+.support-wrapper{
+grid-column:1 / -1;
+width:100%;
+}
+.programming-card{
+min-width:300px;
+}
+.support-card{
+grid-column:span 3;
+padding:18px 15px;
+background:rgba(11,93,59,.08);
+border:none;
+outline:none;
+border-radius:18px;
 text-align:center;
-font-size:18px;
-box-shadow:0 6px 18px rgba(0,0,0,.05);
+font-size:clamp(14px,1.5vw,18px);
+font-weight:600;
+color:#0B5D3B;
+box-shadow:none;
+line-height:1.7;
+word-break:break-word;
+overflow-wrap:break-word;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:4px;
+flex-wrap:wrap;
+height:auto;
+cursor:pointer;
+transition:.3s;
 }
 
+.center-row:nth-child(5){
+grid-column:3 / span 3;
+}
+.center-row:nth-child(6){
+grid-column:6 / span 3;
+}
+.center-row:nth-child(7){
+grid-column:9 / span 3;
+}
+
+.support-card i{
+color:#0B5D3B;
+font-size:18px;
+flex-shrink:0;
+}
+
+.support-card:hover{
+background:#0B5D3B;
+color:white;
+transform:translateX(-8px);
+}
+
+.support-card:hover i{
+color:white;
+}
+
+.inside-support-title{
+grid-column:1/-1;
+text-align:center;
+font-size:clamp(30px,4vw,42px);
+font-family:"Times New Roman",serif;
+color:#0B5D3B;
+margin:35px 0 25px;
+}
+
+.support-modal{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.5);
+z-index:6000;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+.support-modal-box{
+width:min(700px,100%);
+background:white;
+border-radius:30px;
+padding:40px;
+max-height:85vh;
+overflow-y:auto;
+}
+
+.support-modal-box h2{
+text-align:center;
+margin-bottom:25px;
+color:#0B5D3B;
+font-family:"Times New Roman",serif;
+}
+
+.support-modal-content{
+line-height:2;
+font-size:18px;
+color:#444;
+}
+
+.support-close-btn{
+display:block;
+margin:30px auto 0;
+padding:14px 35px;
+border:none;
+border-radius:15px;
+background:#0B5D3B;
+color:white;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
+
+.support-close-btn:hover{
+background:#08472d;
+transform:translateY(-3px);
+}
 /* ================= SKILLS ================= */
 
 .skills-grid{
 width:min(1200px,92%);
 margin:auto;
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+grid-template-columns:repeat(3,1fr);
 gap:25px;
 }
 
 .skill-card{
-padding:35px 25px;
+padding:clamp(20px,3vw,35px) clamp(15px,2vw,25px);
 border-radius:30px;
 background:rgba(255,255,255,.75);
 text-align:center;
 box-shadow:0 8px 25px rgba(0,0,0,.05);
 transition:.3s;
-font-size:55px;
+font-size:clamp(35px,5vw,55px);
 }
 
 .skill-card:hover{
@@ -684,7 +858,7 @@ transform:translateY(-8px);
 
 .skill-card p{
 margin-top:20px;
-font-size:17px;
+font-size:clamp(14px,1.5vw,17px);
 line-height:1.8;
 color:#444;
 }
@@ -844,8 +1018,6 @@ onclick="toggleDepartments()"></i>
 
 <!-- النبذة -->
 
-<h2 class="section-title">نبذة عن المرحلة المشتركة</h2>
-
 <div class="glass-box">
 
 يبدأ الطالب دراسته مباشرة في كلية علوم الأرض، حيث يدرس خلال أول سنتين مجموعة من المقررات الأساسية المشتركة التي تؤهله للتعرف على مختلف مجالات علوم الأرض واكتساب المهارات العلمية والعملية اللازمة قبل اختيار التخصص.
@@ -869,14 +1041,34 @@ onclick="toggleDepartments()"></i>
 السنة الأولى
 </div>
 
-<ul>
-<li>المقررات الأساسية.</li>
-<li>المقررات العملية والمخبرية.</li>
-<li>استكشاف مجالات علوم الأرض.</li>
-<li>المهارات المكتسبة.</li>
-<li>التقارير والأنشطة العلمية.</li>
-</ul>
+<div class="year-buttons">
 
+<button class="year-btn"
+onclick="openModal('عنوان','#محتوى.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+اسم
+</button>
+
+<button class="year-btn"
+onclick="openModal('عنوان','#محتوى.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+اسم
+</button>
+
+<button class="year-btn"
+onclick="openModal('عنوان','#محتوى.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+اسم
+</button>
+
+<button class="year-btn"
+onclick="openModal('عنوان','#محتوى.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+اسم
+</button>
+
+<button class="year-btn"
+onclick="openModal('عنوان','#محتوى.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+اسم
+</button>
+
+</div>
 </div>
 
 <div class="journey-road">
@@ -886,7 +1078,7 @@ onclick="toggleDepartments()"></i>
 </div>
 
 <div class="journey-image">
-<img src="اسم_الصورة.png" alt="">
+<img src="ROCK.PNG" alt="">
 </div>
 <div class="year-box year-two">
 
@@ -894,38 +1086,110 @@ onclick="toggleDepartments()"></i>
 السنة الثانية
 </div>
 
-<ul>
-<li>المقررات المتقدمة.</li>
-<li>نظم المعلومات الجغرافية والاستشعار عن بعد.</li>
-<li>التطبيقات العملية والميدانية.</li>
-<li>استكشاف التخصصات الأكاديمية.</li>
-<li>اختيار التخصص المناسب.</li>
-</ul>
+<div class="year-buttons">
+
+<button class="year-btn"
+onclick="openModal('عنوان','#محتوى.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+اسم
+</button>
+
+<button class="year-btn"
+onclick="openModal('عنوان','#محتوى.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+اسم
+</button>
+
+<button class="year-btn"
+onclick="openModal('عنوان','#محتوى.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+اسم
+</button>
+
+<button class="year-btn"
+onclick="openModal('عنوان','#محتوى.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+اسم
+</button>
+
+<button class="year-btn"
+onclick="openModal('عنوان','#محتوى.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+اسم
+</button>
 
 </div>
+</div>
 
-</section>
-
-<!-- المقررات المساندة -->
-
+<div class="support-wrapper">
 <h2 class="section-title">المقررات المساندة</h2>
-
 <div class="support-box">
 
 <div class="support-grid">
 
-<div>الرياضيات العامة</div>
-<div>الفيزياء العامة</div>
-<div>الكيمياء العامة</div>
-<div>اللغة الإنجليزية</div>
-<div>اللغة العربية</div>
-<div>الإحصاء</div>
-<div>البرمجة وحل المشكلات</div>
+<button class="support-card"
+onclick="openSupportModal(
+'الرياضيات العامة',
+'اكتبي هنا محتوى مقرر الرياضيات العامة'
+)">
+<span>الرياضيات العامة</span>
+<i class="fa-solid fa-calculator"></i>
+</button>
+
+<button class="support-card"
+onclick="openSupportModal(
+'الفيزياء العامة',
+'اكتبي هنا محتوى مقرر الفيزياء العامة'
+)">
+<span>الفيزياء العامة</span>
+<i class="fa-solid fa-atom"></i>
+</button>
+
+<button class="support-card"
+onclick="openSupportModal(
+'الكيمياء العامة',
+'اكتبي هنا محتوى مقرر الكيمياء العامة'
+)">
+<span>الكيمياء العامة</span>
+<i class="fa-solid fa-flask"></i>
+</button>
+
+<button class="support-card"
+onclick="openSupportModal(
+'اللغة الإنجليزية',
+'اكتبي هنا محتوى مقرر اللغة الإنجليزية'
+)">
+<span>اللغة الإنجليزية</span>
+<i class="fa-solid fa-language"></i>
+</button>
+
+<button class="support-card center-row"
+onclick="openSupportModal(
+'اللغة العربية',
+'اكتبي هنا محتوى مقرر اللغة العربية'
+)">
+<span>اللغة العربية</span>
+<i class="fa-solid fa-book-open"></i>
+</button>
+
+<button class="support-card center-row"
+onclick="openSupportModal(
+'الإحصاء',
+'اكتبي هنا محتوى مقرر الإحصاء'
+)">
+<span>الإحصاء</span>
+<i class="fa-solid fa-chart-column"></i>
+</button>
+
+<button class="support-card center-row programming-card"
+onclick="openSupportModal(
+'البرمجة وحل المشكلات',
+'اكتبي هنا محتوى مقرر البرمجة وحل المشكلات'
+)">
+<span>البرمجة وحل المشكلات</span>
+<i class="fa-solid fa-code"></i>
+</button>
 
 </div>
-
+</div>
 </div>
 
+</section>
 
 <!-- المهارات -->
 
@@ -970,6 +1234,30 @@ onclick="toggleDepartments()"></i>
 </div>
 </div>
 
+<div class="modal" id="modal">
+<div class="modal-box">
+<span class="close-modal"
+onclick="closeModal()">
+✕
+</span>
+<h2 id="modalTitle"></h2>
+<div class="modal-content"></div>
+</div>
+
+</div>
+
+<div class="support-modal" id="supportModal">
+<div class="support-modal-box">
+<h2 id="supportModalTitle"></h2>
+<div class="support-modal-content"></div>
+<button class="support-close-btn"
+onclick="closeSupportModal()">
+إغلاق
+</button>
+</div>
+
+</div>
+
 <footer>
 
 <p>
@@ -1002,6 +1290,48 @@ menu.style.display="none";
 else{
 menu.style.display="block";
 }
+
+}
+function openModal(title,content){
+
+document.getElementById("modal").style.display="flex";
+
+document.getElementById("modalTitle").innerText=title;
+
+document.querySelector(".modal-content").innerHTML=content;
+
+}
+function closeModal(){
+
+document.getElementById("modal").style.display="none";
+
+}
+
+window.onclick=function(event){
+
+let modal=document.getElementById("modal");
+
+if(event.target==modal){
+
+modal.style.display="none";
+
+}
+
+}
+
+function openSupportModal(title,content){
+
+document.getElementById("supportModal").style.display="flex";
+
+document.getElementById("supportModalTitle").innerText=title;
+
+document.querySelector(".support-modal-content").innerHTML=content;
+
+}
+
+function closeSupportModal(){
+
+document.getElementById("supportModal").style.display="none";
 
 }
 </script>
