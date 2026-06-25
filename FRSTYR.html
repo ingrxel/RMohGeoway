@@ -496,41 +496,118 @@ color:#444;
 
 .journey-map{
 width:min(1200px,92%);
+
+
 margin:auto;
-padding:60px;
+
+padding:clamp(20px,3vw,40px);
+
 border-radius:40px;
+
 background:rgba(255,255,255,.35);
+
 backdrop-filter:blur(12px);
+
 border:1px solid rgba(255,255,255,.4);
+
 box-shadow:0 10px 35px rgba(0,0,0,.06);
 
-display:flex;
-flex-direction:column;
-gap:20px;
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+grid-template-rows:auto auto;
+grid-template-areas:
+"first empty"
+"arrow second";
+
+grid-template-rows:auto auto;
+gap:clamp(5px,1vw,15px);align-items:center;
+min-height:800px;
+height:auto;
 }
 
 /* ================= YEAR BOX ================= */
 
 .year-box{
-width:min(500px,90%);
-padding:40px;
+width:min(100%,500px);
+
+padding:clamp(15px,2vw,40px);
+
 background:rgba(255,255,255,.85);
+
 border-radius:30px;
+
 box-shadow:0 8px 25px rgba(0,0,0,.06);
+
+overflow:hidden;
+}
+
+.year-one-group{
+grid-area:first;
+
+justify-self:start;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:flex-start;
+
+max-width:100%;
 }
 
 .year-one{
-align-self:flex-start;
-margin-left:0;
+position:static;
 }
+
+.journey-road{
+grid-area:arrow;
+
+justify-self:center;
+
+align-self:center;
+
+width:min(100%,420px);
+}
+
+.journey-road img{
+width:100%;
+height:auto;
+object-fit:contain;
+}
+
+.journey-image{
+grid-area:empty;
+
+width:100%;
+height:100%;
+
+display:flex;
+justify-content:center;
+align-items:flex-start;
+}
+
+.journey-image img{
+width:100%;
+height:100%;
+max-height:clamp(240px,29vw,400px);
+object-fit:contain;
+}
+
 
 .year-two{
-align-self:flex-end;
-margin-right:0;
-}
+grid-area:second;
 
-.year-box:hover{
-transform:translateY(-6px);
+justify-self:end;
+
+align-self:center;
+
+width:100%;
+
+max-width:100%;
+
+margin-top:clamp(-350px,-28vw,-500px);
 }
 
 .year-title{
@@ -539,7 +616,7 @@ color:white;
 padding:18px;
 border-radius:18px;
 text-align:center;
-font-size:28px;
+font-size:clamp(18px,2.2vw,28px);
 margin-bottom:30px;
 }
 
@@ -548,26 +625,12 @@ list-style:none;
 }
 
 .year-box li{
-font-size:18px;
-line-height:2;
-margin:12px 0;
+font-size:clamp(13px,1.5vw,18px);
+line-height:1.8;
+margin:8px 0;
 }
 
-/* ================= ARROW ================= */
 
-.journey-road{
-width:min(320px,50%);
-margin:auto;
-display:flex;
-justify-content:center;
-align-items:center;
-}
-
-.journey-road img{
-width:100%;
-height:auto;
-object-fit:contain;
-}
 /* ================= SUPPORT ================= */
 
 .support-box{
@@ -798,6 +861,8 @@ onclick="toggleDepartments()"></i>
 
 <section class="journey-map">
 
+<div class="year-one-group">
+
 <div class="year-box year-one">
 
 <div class="year-title">
@@ -814,11 +879,15 @@ onclick="toggleDepartments()"></i>
 
 </div>
 
-
 <div class="journey-road">
-<img src="road.png" alt="Academic Journey Road">
+<img src="ARROW.PNG" alt="Academic Journey Road">
 </div>
 
+</div>
+
+<div class="journey-image">
+<img src="اسم_الصورة.png" alt="">
+</div>
 <div class="year-box year-two">
 
 <div class="year-title">
