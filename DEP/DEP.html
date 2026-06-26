@@ -8,7 +8,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>قسم جيولوجيا المياه</title>
+<title>الأقسام العلمية</title>
 
 <style>
 
@@ -240,12 +240,9 @@ pointer-events:none;
 z-index:-1;
 }
 
-body{
-background:#f8f9fb;
-}
-
 .content{
-padding:120px 5% 80px;
+padding-top:95px;
+text-align:center;
 }
 
 /* HEADER */
@@ -444,69 +441,116 @@ transition:.2s;
 .sidebar-bottom-links a:hover{
 background:#f3f3f3;
 }
-.department-section{
-max-width:1200px;
-margin:auto;
+
+/* ================= DEPARTMENTS ================= */
+
+.page-title{
 text-align:center;
-}
-
-.department-title{
 font-family:"Times New Roman",serif;
-font-size:clamp(35px,4vw,50px);
+font-size:clamp(30px,4vw,48px);
 color:#0B5D3B;
-margin-bottom:20px;
+margin-bottom:30px;
 }
 
-.department-logo{
-width:200px;
-height:200px;
-object-fit:contain;
-margin-bottom:15px;
-}
-
-.about-box,
-.info-box,
-.why-earth{
-background:rgba(255,255,255,.65);
-backdrop-filter:blur(10px);
-border:1px solid rgba(11,93,59,.12);
-border-radius:25px;
-padding:35px;
-box-shadow:0 8px 20px rgba(0,0,0,.05);
-}
-
-.about-box{
-margin-bottom:35px;
-text-align:right;
-}
-
-.cards-container{
+.departments-row{
 display:flex;
+justify-content:center;
+align-items:stretch;
 gap:25px;
 flex-wrap:wrap;
-margin-bottom:35px;
-}
-
-.info-box{
-flex:1 1 350px;
-text-align:right;
-}
-
-.about-box h2,
-.info-box h2,
-.why-earth h2{
-font-family:"Times New Roman",serif;
-font-size:30px;
-color:#0B5D3B;
 margin-bottom:20px;
 }
 
-.about-box p{
-line-height:2.3;
-font-size:17px;
-color:#444;
+.departments-center{
+display:flex;
+justify-content:center;
+margin-bottom:20px;
 }
 
+.department-card{
+width:clamp(140px,16vw,180px);
+min-height:clamp(140px,18vw,200px);
+background:rgba(237,248,238,.9);
+border:1px solid rgba(11,93,59,.12);
+border-radius:24px;
+padding:15px;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+text-decoration:none;
+text-align:center;
+
+box-shadow:0 6px 18px rgba(0,0,0,.06);
+transition:.3s;
+}
+
+/* قسم الجيولوجيا الهندسية والبيئية */
+.card-envi{
+width:clamp(105px,13vw,140px);
+min-height:clamp(105px,13vw,140px);
+}
+
+/* قسم جيولوجيا البترول والترسبات */
+.card-petro{
+width:clamp(105px,13vw,140px);
+min-height:clamp(105px,13vw,140px);
+}
+
+/* قسم الجيوفيزياء */
+.card-geophy{
+width:clamp(100px,12vw,135px);
+min-height:clamp(100px,12vw,135px);
+}
+
+/* قسم الثروة المعدنية والصخور */
+.card-minrok{
+width:clamp(115px,14vw,155px);
+min-height:clamp(115px,14vw,155px);
+}
+
+/* قسم تقنيات الاستكشاف الجيولوجي */
+.card-expl{
+width:clamp(105px,13vw,140px);
+min-height:clamp(105px,13vw,140px);
+}
+
+/* قسم الجيولوجيا البنائية والاستشعار عن بعد */
+.card-struc{
+width:clamp(125px,15vw,170px);
+min-height:clamp(125px,15vw,170px);
+}
+
+/* قسم جيولوجيا المياه */
+.card-hydro{
+width:clamp(105px,13vw,140px);
+min-height:clamp(105px,13vw,140px);
+}
+.department-card:hover{
+transform:translateY(-8px);
+background:#e5f3e7;
+box-shadow:0 12px 25px rgba(0,0,0,.1);
+}
+
+.department-card h2{
+font-family:"Times New Roman",serif;
+font-size:clamp(14px,1.6vw,18px);
+color:#0B5D3B;
+line-height:1.2;
+margin-bottom:0;
+}
+
+.department-card img{
+width:75%;
+height:auto;
+
+object-fit:contain;
+display:block;
+
+margin-top:4px;
+}
 
 /* FOOTER */
 
@@ -584,6 +628,7 @@ color:rgba(255,255,255,0.55);
 
 </div>
 <div class="dots-pattern"></div>
+
 <header>
 
 <div class="menu-btn" onclick="openMenu()">
@@ -594,7 +639,7 @@ color:rgba(255,255,255,0.55);
 
 <div class="logo-section">
 
-<img src="MOUNT.png" alt="logo">
+<img src="../MOUNT.png" alt="logo">
 
 <div class="university">
 جــامــعــة المـــلك عــبدالـــعزيـــز
@@ -613,20 +658,17 @@ color:rgba(255,255,255,0.55);
 </header>
 
 <div class="sidebar" id="sidebar">
-
 <div class="close-btn" onclick="closeMenu()">
 ✕
 </div>
 
-<a href="index.html">الرئــيــســة</a>
-<a href="ABT.html">عـن الكــليــة</a>
+<a href="../index.html">الرئــيــســة</a>
+<a href="../ABT/ABT.html">عـن الكــليــة</a>
 <div class="dropdown">
 
 <div class="dropdown-btn">
 
-<a href="DEP.html">
-الأقــسام العــلميــة
-</a>
+<a href="DEP.html">الأقــسام العــلميــة</a>
 
 <i class="fa-solid fa-chevron-down"
 onclick="toggleDepartments()"></i>
@@ -634,7 +676,6 @@ onclick="toggleDepartments()"></i>
 </div>
 
 <div class="dropdown-content" id="departmentsMenu">
-
 <a href="ENVI.html">قسم الجيولوجيا الهندسية والبيئية</a>
 <a href="PTRO.html">قسم جيولوجيا البترول والترسبات</a>
 <a href="GEPHY.html">قسم الجيوفيزياء</a>
@@ -646,12 +687,12 @@ onclick="toggleDepartments()"></i>
 </div>
 </div>
 
-<a href="FLD.html">الــرحلات الحــقــليــة</a>
-<a href="EMPLY.html">مجـلات و إحصائيات الــتوظــيـف</a>
-<a href="FRSTYR.html">الــسنة التــحضيــريــية</a>
+<a href="../FLD/FLD.html">الــرحلات الحــقــليــة</a>
+<a href="../EMPLY/EMPLY.html">مجـلات و إحصائيات الــتوظــيـف</a>
+<a href="../FRSTYR/FRSTYR.html">الــسنة التــحضيــريــية</a>
 <a href="#">مــقررات الــكليــة</a>
-<a href="ADMSN.html">القــبـــول</a>
-<a href="TRNSFR.html">التـحويـل</a>
+<a href="../ADMSN/ADMSN.html">القــبـــول</a>
+<a href="../TRNSFR/TRNSFR.html">التـحويـل</a>
 <a href="#">الأسئلة الأكثر شيوعًا</a>
 
 
@@ -668,61 +709,60 @@ onclick="toggleDepartments()"></i>
 
 </div>
 
+
 <div class="content">
 
-<section class="department-section">
-
-<h1 class="department-title">
-قسم جيولوجيا المياه
+<h1 class="page-title">
+الأقسام العلمية
 </h1>
 
+<div class="departments-row">
 
-<img src="HYDRO.PNG" class="department-logo">
+<a href="ENVI.html" class="department-card card-envi">
+<h2>قسم الجيولوجيا الهندسية والبيئية</h2>
+<img src="ENVI.PNG">
+</a>
 
-<div class="about-box">
+<a href="PTRO.html" class="department-card card-petro">
+<h2>قسم جيولوجيا البترول والترسبات</h2>
+<img src="PETRO.PNG">
+</a>
 
-<h2>نبذة عن القسم</h2>
-
-<p>
-يُعنى قسم جيولوجيا المياه بدراسة المياه الجوفية من حيث مصادرها وحركتها وجودتها وتغذيتها الطبيعية، بالإضافة إلى طرق استكشافها وإدارتها والمحافظة عليها لتحقيق الاستدامة المائية. ويسهم القسم في دعم الدراسات المتعلقة بالموارد المائية وحماية البيئة وتحقيق الأمن المائي.
-</p>
-
-</div>
-
-<div class="cards-container">
-
-<div class="info-box">
-
-<h2>مجالات العمل</h2>
-
-<ul>
-<li>وزارة البيئة والمياه والزراعة.</li>
-<li>شركات المياه والتحلية.</li>
-<li>شركات الاستشارات البيئية.</li>
-<li>مشاريع المياه الجوفية.</li>
-<li>المراكز البحثية.</li>
-<li>الجهات الحكومية المعنية بالموارد المائية.</li>
-</ul>
+<a href="GEPHY.html" class="department-card card-geophy">
+<h2>قسم الجيوفيزياء</h2>
+<img src="GEPHY.PNG">
+</a>
 
 </div>
 
-<div class="info-box">
+<div class="departments-center">
 
-<h2>مميزات القسم</h2>
-
-<ul>
-<li>يساهم في تحقيق الأمن المائي.</li>
-<li>تزداد أهميته مع تحديات المياه عالميًا.</li>
-<li>فرص عمل في القطاعات الحكومية والخاصة.</li>
-<li>ارتباط مباشر بالقضايا البيئية والتنموية.</li>
-</ul>
+<a href="MINROK.html" class="department-card card-minrok">
+<h2>قسم الثروة المعدنية والصخور</h2>
+<img src="MINROK.PNG">
+</a>
 
 </div>
 
+<div class="departments-row">
+
+<a href="EXPL.html" class="department-card card-minrok">
+<h2>قسم تقنية الاستكشاف الجيولوجي</h2>
+<img src="EXPL.PNG">
+</a>
+
+<a href="STRUC.html" class="department-card card-struc">
+<h2>قسم الجيولوجيا البنائية والاستشعار عن بُعد</h2>
+<img src="STRUC.PNG">
+</a>
+
+<a href="HYDRO.html" class="department-card card-hydro">
+<h2>قسم جيولوجيا المياه</h2>
+<img src="HYDRO.PNG">
+</a>
+
 </div>
-
-
-</section>
+</div>
 </div>
 
 <footer>
@@ -741,7 +781,8 @@ Retal Abdulmannan & Mohammed Khubrani
 </p>
 
 <p class="footer-disclaimer">
-This website is a student-led initiative and is not an official website of the Faculty nor the University.
+This website was independently designed and developed by students, <br>
+It is not an official website of the Faculty nor  the University.
 </p>
 
 </footer>
@@ -756,7 +797,6 @@ document.getElementById("sidebar").classList.add("active");
 function closeMenu(){
 document.getElementById("sidebar").classList.remove("active");
 }
-
 function toggleDepartments(){
 
 let menu=document.getElementById("departmentsMenu");

@@ -507,31 +507,56 @@ font-size:17px;
 color:#444;
 }
 
-
 /* FOOTER */
 
 footer{
 width:100%;
-height:90px;
 background:rgba(11,93,59,0.88);
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
+padding:28px 20px;
 margin-top:80px;
+text-align:center;
+direction:ltr;
+}
+
+footer *{
+direction:ltr;
 }
 
 footer p{
 font-family:"Times New Roman",serif;
-color:rgba(255,255,255,0.85);
+margin:0;
+}
+
+.footer-title{
 font-size:13px;
-margin:2px 0;
+color:rgba(255,255,255,0.85);
+margin-bottom:22px;
 }
 
 .footer-credit{
 font-size:11px;
+line-height:1.8;
 color:rgba(255,255,255,0.55);
 letter-spacing:.5px;
+margin-bottom:22px;
+}
+
+.footer-copyright{
+font-size:11px;
+font-weight:700;
+color:rgba(255,255,255,0.65);
+margin-bottom:22px;
+}
+
+.footer-disclaimer{
+max-width:750px;
+font-size:11px;
+line-height:1.8;
+color:rgba(255,255,255,0.55);
 }
 
 </style>
@@ -567,7 +592,7 @@ letter-spacing:.5px;
 
 <div class="logo-section">
 
-<img src="MOUNT.png" alt="logo">
+<img src="../MOUNT.png" alt="logo">
 
 <div class="university">
 جــامــعــة المـــلك عــبدالـــعزيـــز
@@ -586,20 +611,17 @@ letter-spacing:.5px;
 </header>
 
 <div class="sidebar" id="sidebar">
-
 <div class="close-btn" onclick="closeMenu()">
 ✕
 </div>
 
-<a href="index.html">الرئــيــســة</a>
-<a href="ABT.html">عـن الكــليــة</a>
+<a href="../index.html">الرئــيــســة</a>
+<a href="../ABT/ABT.html">عـن الكــليــة</a>
 <div class="dropdown">
 
 <div class="dropdown-btn">
 
-<a href="DEP.html">
-الأقــسام العــلميــة
-</a>
+<a href="DEP.html">الأقــسام العــلميــة</a>
 
 <i class="fa-solid fa-chevron-down"
 onclick="toggleDepartments()"></i>
@@ -607,7 +629,6 @@ onclick="toggleDepartments()"></i>
 </div>
 
 <div class="dropdown-content" id="departmentsMenu">
-
 <a href="ENVI.html">قسم الجيولوجيا الهندسية والبيئية</a>
 <a href="PTRO.html">قسم جيولوجيا البترول والترسبات</a>
 <a href="GEPHY.html">قسم الجيوفيزياء</a>
@@ -617,15 +638,15 @@ onclick="toggleDepartments()"></i>
 <a href="HYDRO.html">قسم جيولوجيا المياه</a>
 
 </div>
+</div>
 
-</div><a href="FLD.html">الــرحلات الحــقــليــة</a>
-<a href="EMPLY.html">مجــالات الــتوظــيــف</a>
-<a href="FRSTYR.html">الــسنة التــحضيــريــية</a>
+<a href="../FLD/FLD.html">الــرحلات الحــقــليــة</a>
+<a href="../EMPLY/EMPLY.html">مجـلات و إحصائيات الــتوظــيـف</a>
+<a href="../FRSTYR/FRSTYR.html">الــسنة التــحضيــريــية</a>
 <a href="#">مــقررات الــكليــة</a>
-<a href="ADMSN.html">القــبـــول</a>
-<a href="TRNSFR.html">التـحويـل</a>
+<a href="../ADMSN/ADMSN.html">القــبـــول</a>
+<a href="../TRNSFR/TRNSFR.html">التـحويـل</a>
 <a href="#">الأسئلة الأكثر شيوعًا</a>
-
 
 
 <div class="sidebar-bottom-links">
@@ -698,12 +719,22 @@ onclick="toggleDepartments()"></i>
 
 <footer>
 
-<p>
-Faculty of Earth Sciences Website Project
+<p class="footer-title">
+Faculty Website Project
 </p>
 
 <p class="footer-credit">
-Designed & Developed by Retal Abdulmannan
+Designed & Developed by  <br>
+Retal Abdulmannan & Mohammed Khubrani
+</p>
+
+<p class="footer-copyright">
+© 2026 All Rights Reserved.
+</p>
+
+<p class="footer-disclaimer">
+This website was independently designed and developed by students, <br>
+It is not an official website of the Faculty nor  the University.
 </p>
 
 </footer>

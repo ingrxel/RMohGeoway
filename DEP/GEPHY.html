@@ -8,7 +8,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>عنوان الصفحة</title>
+<title>قسم الجيوفيزياء</title>
 
 <style>
 
@@ -16,7 +16,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:"Times New Roman",serif;
+font-family:Tahoma,sans-serif;
 }
 
 .background-design{
@@ -45,12 +45,14 @@ top:-50px;
 right:-70px;
 width:320px;
 height:320px;
+
 clip-path:polygon(
 30% 0%,
 100% 0%,
 100% 100%,
 0% 35%
 );
+
 transform:rotate(8deg);
 }
 
@@ -61,11 +63,13 @@ top:120px;
 left:-90px;
 width:280px;
 height:280px;
+
 clip-path:polygon(
 0 20%,
 100% 0,
 60% 100%
 );
+
 background:rgba(185,220,198,.18);
 }
 
@@ -76,11 +80,13 @@ bottom:-90px;
 left:-60px;
 width:350px;
 height:350px;
+
 clip-path:polygon(
 0 0,
 100% 100%,
 0 100%
 );
+
 background:rgba(185,220,198,.20);
 }
 
@@ -91,12 +97,15 @@ bottom:-120px;
 right:-50px;
 width:340px;
 height:340px;
+
 clip-path:polygon(
 100% 0,
 100% 100%,
 0 60%
 );
+
 background:rgba(185,220,198,.18);
+
 transform:rotate(-10deg);
 }
 
@@ -146,6 +155,7 @@ top:-120px;
 right:-160px;
 width:520px;
 height:420px;
+
 clip-path:polygon(
 20% 0%,
 100% 0%,
@@ -163,12 +173,14 @@ top:180px;
 left:-220px;
 width:500px;
 height:500px;
+
 clip-path:polygon(
 0% 15%,
 90% 0%,
 100% 70%,
 35% 100%
 );
+
 transform:rotate(-25deg);
 }
 
@@ -179,6 +191,7 @@ bottom:-200px;
 left:-130px;
 width:650px;
 height:420px;
+
 clip-path:polygon(
 0% 35%,
 45% 0%,
@@ -186,6 +199,7 @@ clip-path:polygon(
 60% 100%,
 0% 100%
 );
+
 transform:rotate(12deg);
 }
 
@@ -196,12 +210,14 @@ bottom:-150px;
 right:-180px;
 width:600px;
 height:500px;
+
 clip-path:polygon(
 30% 0%,
 100% 20%,
 100% 100%,
 0% 75%
 );
+
 transform:rotate(-18deg);
 }
 
@@ -209,12 +225,17 @@ transform:rotate(-18deg);
 position:fixed;
 top:110px;
 left:30px;
+
 width:180px;
 height:120px;
+
 background-image:
 radial-gradient(circle, rgba(11,93,59,.18) 1px, transparent 1px);
+
 background-size:14px 14px;
+
 opacity:.7;
+
 pointer-events:none;
 z-index:-1;
 }
@@ -349,7 +370,6 @@ margin-top:0;
 position:relative;
 right:0;
 }
-
 /* DROPDOWN */
 
 .dropdown-btn{
@@ -424,188 +444,70 @@ transition:.2s;
 .sidebar-bottom-links a:hover{
 background:#f3f3f3;
 }
-
-/* HERO */
-
-.transfer-hero{
-text-align:center;
-margin-bottom:50px;
-}
-
-.transfer-hero h1{
-font-size:clamp(45px,6vw,65px);
-color:#0B5D3B;
-}
-
-.transfer-hero p{
-max-width:750px;
-margin:15px auto;
-font-size:18px;
-line-height:2;
-color:#555;
-}
-
-
-/* التنبيه */
-
-.alert-box{
-
-width:min(1100px,92%);
-
+.department-section{
+max-width:1200px;
 margin:auto;
-
-border-radius:35px;
-
-overflow:hidden;
-
-background:rgba(255,255,255,.72);
-
-backdrop-filter:blur(10px);
-}
-
-.alert-head{
-
-background:#0B5D3B;
-
-color:white;
-
-padding:18px;
-
 text-align:center;
-
-font-size:24px;
 }
 
-.alert-content{
-
-padding:40px;
-
-text-align:center;
-
-line-height:2.2;
-
-font-size:17px;
-}
-
-.alert-main{
-
-font-size:22px;
-
+.department-title{
+font-family:"Times New Roman",serif;
+font-size:clamp(35px,4vw,50px);
 color:#0B5D3B;
-
-font-weight:bold;
-
 margin-bottom:20px;
 }
 
-
-/* العناوين */
-
-.section-title{
-
-text-align:center;
-
-font-size:40px;
-
-color:#0B5D3B;
-
-margin:70px 0 30px;
+.department-logo{
+width:200px;
+height:200px;
+object-fit:contain;
+margin-bottom:15px;
 }
 
-
-/* معلومات مهمة */
-
-.important-box{
-
-width:min(1100px,92%);
-
-margin:auto;
-
-padding:40px;
-
-border-radius:30px;
-
-background:rgba(255,255,255,.72);
-
+.about-box,
+.info-box,
+.why-earth{
+background:rgba(255,255,255,.65);
 backdrop-filter:blur(10px);
-}
-
-.important-box ul{
-
-text-align:center;
-
-line-height:2.2;
-
-font-size:17px;
-
-list-style-position:inside;
-}
-
-.important-box li{
-margin:15px 0;
-}
-
-
-/* البطاقات */
-
-.transfer-grid{
-
-width:min(1100px,95%);
-
-margin:auto;
-
-display:flex;
-
-flex-wrap:wrap;
-
-justify-content:center;
-
-gap:25px;
-}
-
-.transfer-card{
-
-width:500px;
-
-background:rgba(11,93,59,.08);
-
-border-radius:30px;
-
-overflow:hidden;
-
-display:flex;
-
-flex-direction:column;
-
-transition:.3s;
-}
-
-.transfer-card:hover{
-transform:translateY(-6px);
-}
-
-.card-head{
-
-background:#0B5D3B;
-
-color:white;
-
-padding:18px;
-
-text-align:center;
-
-font-size:24px;
-}
-
-.transfer-card ul,
-.transfer-card ol{
-
+border:1px solid rgba(11,93,59,.12);
+border-radius:25px;
 padding:35px;
-
-line-height:2.2;
-
-font-size:17px;
+box-shadow:0 8px 20px rgba(0,0,0,.05);
 }
+
+.about-box{
+margin-bottom:35px;
+text-align:right;
+}
+
+.cards-container{
+display:flex;
+gap:25px;
+flex-wrap:wrap;
+margin-bottom:35px;
+}
+
+.info-box{
+flex:1 1 350px;
+text-align:right;
+}
+
+.about-box h2,
+.info-box h2,
+.why-earth h2{
+font-family:"Times New Roman",serif;
+font-size:30px;
+color:#0B5D3B;
+margin-bottom:20px;
+}
+
+.about-box p{
+line-height:2.3;
+font-size:17px;
+color:#444;
+}
+
+
 /* FOOTER */
 
 footer{
@@ -659,10 +561,10 @@ color:rgba(255,255,255,0.55);
 }
 
 </style>
+
 </head>
 
 <body>
-
 <div class="background-design">
 
 <div class="polygon p1"></div>
@@ -691,7 +593,7 @@ color:rgba(255,255,255,0.55);
 
 <div class="logo-section">
 
-<img src="MOUNT.png" alt="logo">
+<img src="../MOUNT.png" alt="logo">
 
 <div class="university">
 جــامــعــة المـــلك عــبدالـــعزيـــز
@@ -710,13 +612,12 @@ color:rgba(255,255,255,0.55);
 </header>
 
 <div class="sidebar" id="sidebar">
-
 <div class="close-btn" onclick="closeMenu()">
 ✕
 </div>
 
-<a href="index.html">الرئــيــســة</a>
-<a href="ABT.html">عـن الكــليــة</a>
+<a href="../index.html">الرئــيــســة</a>
+<a href="../ABT/ABT.html">عـن الكــليــة</a>
 <div class="dropdown">
 
 <div class="dropdown-btn">
@@ -729,26 +630,24 @@ onclick="toggleDepartments()"></i>
 </div>
 
 <div class="dropdown-content" id="departmentsMenu">
-
 <a href="ENVI.html">قسم الجيولوجيا الهندسية والبيئية</a>
-<a href="PETRO.html">قسم جيولوجيا البترول والترسبات</a>
+<a href="PTRO.html">قسم جيولوجيا البترول والترسبات</a>
 <a href="GEPHY.html">قسم الجيوفيزياء</a>
 <a href="MINROK.html">قسم الثروة المعدنية والصخور</a>
 <a href="EXPL.html">قسم تقنية الاستكشاف الجيولوجي</a>
-<a href="SRTUC.html">قسم الجيولوجيا البنائية والاستشعار عن بُعد</a>
+<a href="STRUC.html">قسم الجيولوجيا البنائية والاستشعار عن بُعد</a>
 <a href="HYDRO.html">قسم جيولوجيا المياه</a>
 
 </div>
 </div>
 
-<a href="FLD.html">الــرحلات الحــقــليــة</a>
-<a href="#EMPLY.html">مجـلات و إحصائيات الــتوظــيـف</a>
-<a href="FRSTYR.html">الــسنة التــحضيــريــية</a>
+<a href="../FLD/FLD.html">الــرحلات الحــقــليــة</a>
+<a href="../EMPLY/EMPLY.html">مجـلات و إحصائيات الــتوظــيـف</a>
+<a href="../FRSTYR/FRSTYR.html">الــسنة التــحضيــريــية</a>
 <a href="#">مــقررات الــكليــة</a>
-<a href="ADMSN.html">القــبـــول</a>
-<a href="TRNSFR.html">التـحويـل</a>
+<a href="../ADMSN/ADMSN.html">القــبـــول</a>
+<a href="../TRNSFR/TRNSFR.html">التـحويـل</a>
 <a href="#">الأسئلة الأكثر شيوعًا</a>
-
 
 
 <div class="sidebar-bottom-links">
@@ -760,125 +659,63 @@ onclick="toggleDepartments()"></i>
 <a href="#">الحساب الرسمي</a>
 
 </div>
+
 </div>
 
 <div class="content">
 
-<section class="transfer-hero">
+<section class="department-section">
 
-<h1>التحويل إلى كلية علوم الأرض</h1>
+<h1 class="department-title">
+قسم الجيوفيزياء
+</h1>
 
-<p>
-تعرف على آخر مستجدات التحويل إلى كلية علوم الأرض والمعلومات المتعلقة بإجراءات وشروط التحويل.
-</p>
+<img src="GEPHY.PNG" class="department-logo">
 
-</section>
+<div class="about-box">
 
-
-<section class="alert-box">
-
-<div class="alert-head">
-الوضع الحالي للتحويل
-</div>
-
-<div class="alert-content">
-
-<p class="alert-main">
-حتى الآن، لا يوجد إعلان رسمي يؤكد فتح باب التحويل إلى كلية علوم الأرض للطلاب أو الطالبات.
-</p>
+<h2>نبذة عن القسم</h2>
 
 <p>
-وفقًا لما يتم تداوله، يُعتقد أن ذلك يعود إلى التغييرات التي طرأت على الكلية والخطط الدراسية الجديدة، حيث إن فتح التحويل بالشكل المعتاد قد يترتب عليه تحديات تتعلق بمعادلة المقررات الدراسية أو تأخر بعض الطلاب عن التخرج.
-</p>
-
-<p>
-تم الإشارة في أكثر من مناسبة إلى أن موضوع التحويل لا يزال قيد الدراسة، وقد يتم اعتماد آلية مناسبة للتحويل مستقبلًا، إلا أنه لا يوجد حتى الآن إعلان رسمي أو قرار نهائي بهذا الشأن.
+يستخدم قسم الجيوفيزياء مبادئ الفيزياء لدراسة باطن الأرض دون الحاجة إلى الحفر المباشر، من خلال تحليل الموجات الزلزالية والمجالات المغناطيسية والجاذبية والخصائص الكهربائية. ويساهم في استكشاف المعادن والنفط والمياه الجوفية ودراسة المخاطر الجيولوجية.
 </p>
 
 </div>
 
-</section>
+<div class="cards-container">
 
+<div class="info-box">
 
-<h2 class="section-title">
-معلومات مهمة
-</h2>
-
-<div class="important-box">
+<h2>مجالات العمل</h2>
 
 <ul>
+<li>شركات النفط والغاز.</li>
+<li>شركات التعدين والاستكشاف.</li>
+<li>شركات الخدمات الجيوفيزيائية.</li>
+<li>مشاريع البنية التحتية والأنفاق.</li>
+<li>هيئة المساحة الجيولوجية.</li>
+<li>المراكز البحثية والجامعات.</li>
+</ul>
 
-<li>
-لا يوجد حاليًا إعلان رسمي بشأن فتح باب التحويل.
-</li>
+</div>
+<div class="info-box">
 
-<li>
-قد تختلف شروط التحويل وآليته عند اعتمادها رسميًا.
-</li>
+<h2>مميزات القسم</h2>
 
-<li>
-يُنصح بمتابعة الإعلانات الرسمية للكلية والجامعة بشكل مستمر للحصول على أحدث المستجدات.
-</li>
 
+<ul>
+<li>يعتمد على التقنيات الحديثة وتحليل البيانات.</li>
+<li>فرص عمل في قطاعات متعددة.</li>
+<li>يجمع بين الجيولوجيا والفيزياء والتقنية.</li>
+<li>مطلوب في مشاريع الاستكشاف الكبرى.</li>
 </ul>
 
 </div>
 
-
-<h2 class="section-title">
-شروط وآلية التحويل المستقبلية
-</h2>
-
-<div class="transfer-grid">
-
-
-<div class="transfer-card">
-
-<div class="card-head">
-شروط التحويل المتوقعة
-</div>
-
-<ul>
-
-<li>استيفاء شروط التحويل المعتمدة من الجامعة.</li>
-
-<li>تحقيق الحد الأدنى للمعدل المطلوب للتحويل.</li>
-
-<li>توفر مقاعد شاغرة في الكلية.</li>
-
-<li>اجتياز المفاضلة بين المتقدمين.</li>
-
-<li>معادلة المقررات الأساسية والعلمية وفق الأنظمة المعتمدة.</li>
-
-</ul>
-
 </div>
 
 
-
-<div class="transfer-card">
-
-<div class="card-head">
-آلية التحويل المتوقعة
-</div>
-
-<ol>
-
-<li>التقديم إلكترونيًا خلال فترة التحويل المعلنة.</li>
-
-<li>مراجعة الطلبات والتأكد من استيفاء الشروط.</li>
-
-<li>دراسة المقررات المطلوب معادلتها.</li>
-
-<li>إجراء المفاضلة بين المتقدمين حسب المقاعد المتاحة.</li>
-
-<li>إعلان نتائج التحويل واستكمال الإجراءات النهائية.</li>
-
-</ol>
-
-</div>
-
-</div>
+</section>
 </div>
 
 <footer>
@@ -897,7 +734,8 @@ Retal Abdulmannan & Mohammed Khubrani
 </p>
 
 <p class="footer-disclaimer">
-This website is a student-led initiative and is not an official website of the Faculty nor the University.
+This website was independently designed and developed by students, <br>
+It is not an official website of the Faculty nor  the University.
 </p>
 
 </footer>
@@ -914,6 +752,7 @@ document.getElementById("sidebar").classList.remove("active");
 }
 
 function toggleDepartments(){
+
 let menu=document.getElementById("departmentsMenu");
 
 if(menu.style.display==="block"){
@@ -922,9 +761,8 @@ menu.style.display="none";
 else{
 menu.style.display="block";
 }
+
 }
-
-
 </script>
 
 </body>
