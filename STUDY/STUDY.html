@@ -8,7 +8,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>الأسئلة الأكثر شيوعًا</title>
+<title>الدراسة والخطة الدراسية</title>
 
 <style>
 
@@ -426,246 +426,632 @@ background:#f3f3f3;
 }
 
 /* ===========================
-   عنوان الصفحة
+   HERO
 =========================== */
 
-.faq-hero{
+.study-hero{
+
 text-align:center;
-margin-bottom:30px;
+
+margin-bottom:60px;
 }
 
-.faq-hero h1{
+.study-hero h1{
+
 font-size:clamp(45px,6vw,65px);
+
 color:#0B5D3B;
+
 margin-bottom:20px;
 }
 
-.faq-hero p{
-max-width:800px;
-margin:auto;
-font-size:18px;
-line-height:2;
-color:#555;
-}
+.study-hero p{
 
-
-
-/* ===========================
-   Accordion
-=========================== */
-
-.faq-section{
-width:100%;
-max-width:1400px;
-margin:auto;
-}
-
-.faq-item{
-width:100%;
-margin-bottom:8px;
-border-radius:15px;
-border:2px solid rgba(11,93,59,.15);
-overflow:hidden;
-background:rgba(255,255,255,.72);
-backdrop-filter:blur(10px);
-box-shadow:0 8px 25px rgba(0,0,0,.05);
-}
-
-.faq-question{
-width:100%;
-padding:20px 30px;
-border:none;
-background:none;
 font-size:20px;
-font-weight:600;
-color:#0B5D3B;
-cursor:pointer;
-display:flex;
-justify-content:space-between;
-align-items:center;
-text-align:right;
-}
 
-.faq-question span{
-font-size:34px;
-transition:.3s;
-}
-
-.faq-answer{
-max-height:0;
-overflow:hidden;
-transition:max-height .4s ease;
-padding:0 30px;
-}
-
-.faq-answer p{
-padding-bottom:30px;
-line-height:2.1;
-font-size:17px;
 color:#555;
 }
 
 
 
 /* ===========================
-   التواصل
+   الرحلة الأكاديمية
 =========================== */
 
-.contact-section{
-text-align:center;
-margin:35px auto;
+.journey-section{
+
+margin-bottom:70px;
 }
 
-.contact-section h2{
-font-size:40px;
-color:#0B5D3B;
-margin-bottom:20px;
-}
+.journey-card{
 
-.contact-section p{
-font-size:18px;
-color:#555;
-margin-bottom:40px;
-}
-
-.contact-buttons{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:25px;
-}
-
-.contact-btn{
-width:280px;
-height:110px;
-border:none;
-border-radius:30px;
-font-size:30px;
-font-weight:600;
-cursor:pointer;
-background:rgba(11,93,59,.1);
-color:#0B5D3B;
-transition:.3s;
-}
-
-.contact-btn:hover{
-transform:translateY(-8px);
-background:#0B5D3B;
-color:white;
-}
-
-
-
-/* ===========================
-   Modal
-=========================== */
-
-.modal-overlay{
-position:fixed;
-inset:0;
-background:rgba(0,0,0,.55);
-display:none;
-justify-content:center;
-align-items:center;
-padding:20px;
-z-index:9999;
-}
-
-.modal-box{
-position:relative;
-width:min(450px,95%);
-padding:50px 35px;
-border-radius:35px;
-background:white;
-border:6px solid rgba(11,93,59,.4);
-
-box-shadow:
-0 12px 35px rgba(0,0,0,.08),
-0 0 0 10px rgba(11,93,59,.04);
-text-align:center;
-animation:popup .3s ease;
-}
-
-
-
-@keyframes popup{
-
-from{
-opacity:0;
-transform:scale(.8);
-}
-
-to{
-opacity:1;
-transform:scale(1);
-}
-}
-
-.modal-title{
 width:100%;
-background:#0B5D3B;
-color:white;
-padding:16px;
-border-radius:18px;
-font-size:24px;
-font-weight:bold;
-margin-bottom:30px;
+
+background:rgba(255,255,255,.72);
+
+backdrop-filter:blur(10px);
+
+border-radius:35px;
+
+padding:40px;
+
+display:flex;
+
+flex-wrap:wrap;
+
+align-items:center;
+
+justify-content:center;
+
+gap:40px;
+
+box-shadow:0 10px 35px rgba(0,0,0,.06);
+}
+
+.journey-stage{
+
+flex:1 1 300px;
+
 text-align:center;
 }
 
-.close-btn{
-position:absolute;
-top:18px;
-left:18px;
-border:none;
-background:none;
-font-size:35px;
-cursor:pointer;
-color:#777;
-}
+.stage-icon{
 
-.modal-avatar{
-width:140px;
-height:140px;
+width:90px;
+height:90px;
+
 border-radius:50%;
-object-fit:cover;
-border:6px solid rgba(11,93,59,.1);
-box-shadow:0 5px 25px rgba(0,0,0,.12);
-margin-bottom:25px;
+
+background:#0B5D3B;
+
+margin:auto auto 25px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:38px;
+
+color:white;
 }
 
-.modal-box h3{
-font-size:28px;
+.journey-stage h2{
+
+font-size:32px;
+
 color:#0B5D3B;
+
 margin-bottom:10px;
 }
 
-.modal-box h4{
-font-size:18px;
-color:#777;
-margin-bottom:25px;
+.journey-stage h3{
+
+font-size:22px;
+
+color:#666;
+
+margin-bottom:20px;
 }
 
-.modal-box p{
-font-size:17px;
-margin-bottom:15px;
+.journey-stage p{
+
+line-height:2;
+
 color:#555;
 }
 
-.email-btn{
-display:inline-block;
-margin-top:20px;
-padding:15px 35px;
-border-radius:50px;
-text-decoration:none;
+
+
+/* الطريق */
+
+.journey-road{
+
+flex:1 1 250px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:15px;
+}
+
+.road-point{
+
+width:22px;
+height:22px;
+
+border-radius:50%;
+
 background:#0B5D3B;
-color:white;
-font-size:17px;
+}
+
+.road-path{
+
+flex:1;
+
+height:6px;
+
+border-radius:50px;
+
+background:
+repeating-linear-gradient(
+90deg,
+#0B5D3B 0 15px,
+transparent 15px 30px
+);
+}
+
+/* ===========================
+   المعلومات الأساسية
+=========================== */
+
+.study-info-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(260px,1fr));
+
+gap:25px;
+
+margin:80px 0;
+}
+
+
+.info-card{
+
+background:rgba(255,255,255,.72);
+
+backdrop-filter:blur(10px);
+
+border-radius:30px;
+
+padding:35px 25px;
+
+text-align:center;
+
+box-shadow:0 8px 30px rgba(0,0,0,.05);
+
 transition:.3s;
 }
 
-.email-btn:hover{
-transform:translateY(-4px);
+
+.info-card:hover{
+
+transform:translateY(-8px);
+}
+
+
+.info-icon{
+
+width:85px;
+height:85px;
+
+margin:0 auto 25px;
+
+border-radius:50%;
+
+background:#0B5D3B;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:34px;
+
+color:white;
+}
+
+
+.info-card h3{
+
+font-size:28px;
+
+color:#0B5D3B;
+
+margin-bottom:18px;
+}
+
+
+.info-card p{
+
+line-height:2;
+
+font-size:17px;
+
+color:#555;
+}
+/* ===========================
+   طبيعة الدراسة
+=========================== */
+
+.study-type{
+
+margin:80px 0;
+}
+
+.section-title{
+
+text-align:center;
+
+font-size:clamp(32px,4vw,45px);
+
+color:#0B5D3B;
+
+margin-bottom:40px;
+}
+
+.study-type-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(260px,1fr));
+
+gap:25px;
+}
+
+.type-card{
+
+background:rgba(255,255,255,.72);
+
+backdrop-filter:blur(10px);
+
+border-radius:30px;
+
+overflow:hidden;
+
+box-shadow:0 8px 30px rgba(0,0,0,.05);
+
+transition:.3s;
+}
+
+.type-card:hover{
+
+transform:translateY(-8px);
+}
+
+.type-card img{
+
+width:100%;
+
+height:220px;
+
+object-fit:cover;
+
+display:block;
+}
+
+.type-card h3{
+
+padding:25px;
+
+font-size:20px;
+
+text-align:center;
+
+color:#0B5D3B;
+
+line-height:1.8;
+}
+
+
+
+/* ===========================
+   المهارات المكتسبة
+=========================== */
+
+.skills-section{
+
+margin:90px 0;
+}
+
+.skills-line{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(220px,1fr));
+
+gap:22px;
+}
+
+/* ===========================
+   Hexagon Skills
+=========================== */
+
+.skills-line{
+
+display:flex;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:12px;
+
+margin-top:50px;
+}
+
+
+.skill-box{
+
+width:170px;
+
+height:185px;
+
+clip-path:polygon(
+25% 6.7%,
+75% 6.7%,
+100% 50%,
+75% 93.3%,
+25% 93.3%,
+0% 50%
+);
+
+background:rgba(255,255,255,.82);
+
+backdrop-filter:blur(10px);
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+text-align:center;
+
+padding:20px;
+
+position:relative;
+isolation:isolate;
+transition:.35s;
+
+}
+
+
+.skill-box:hover{
+
+transform:translateY(-10px) scale(1.06);
+
+outline:6px solid #0B5D3B;
+outline-offset:-3px;
+}
+
+
+/* السداسيات الزوجية تنزل قليلاً */
+
+.skill-box:nth-child(even){
+
+margin-top:45px;
+}
+
+
+.skill-box i{
+
+font-size:38px;
+
+color:#0B5D3B;
+
+margin-bottom:18px;
+}
+
+
+.skill-box p{
+
+font-size:15px;
+
+line-height:1.8;
+
+color:#555;
+}
+
+
+/* دائرة زخرفية */
+
+.skill-box::before{
+
+content:"";
+
+position:absolute;
+
+width:120px;
+
+height:120px;
+
+border-radius:50%;
+
+background:rgba(11,93,59,.035);
+
+top:-25px;
+
+right:-25px;
+}
+
+
+/* مثلث زخرفي */
+
+.skill-box::after{
+
+content:"";
+
+position:absolute;
+
+bottom:15px;
+
+left:15px;
+
+width:35px;
+
+height:35px;
+
+background:rgba(11,93,59,.05);
+
+clip-path:polygon(
+50% 0%,
+0% 100%,
+100% 100%
+);
+}
+.skill-box:hover{
+
+transform:translateY(-10px) scale(1.05);
+}
+
+
+
+.skill-box i{
+
+font-size:32px;
+
+color:#0B5D3B;
+
+margin-bottom:15px;
+}
+
+
+
+.skill-box p{
+
+font-size:14px;
+
+line-height:1.7;
+
+color:#555;
+}
+
+.skill-box:hover{
+
+transform:translateY(-8px);
+}
+
+.skill-box i{
+
+font-size:34px;
+
+color:#0B5D3B;
+
+margin-bottom:20px;
+}
+
+.skill-box p{
+
+font-size:16px;
+
+line-height:2;
+
+color:#555;
+}
+
+/* ===========================
+   ماذا بعد المرحلة المشتركة
+=========================== */
+
+.after-common{
+
+margin:90px 0;
+
+display:flex;
+
+flex-wrap:wrap;
+
+align-items:center;
+
+gap:35px;
+
+background:rgba(255,255,255,.72);
+
+backdrop-filter:blur(10px);
+
+border-radius:35px;
+
+padding:35px;
+
+box-shadow:0 8px 30px rgba(0,0,0,.05);
+}
+
+
+.after-image{
+
+flex:1 1 350px;
+}
+
+.after-image img{
+
+width:100%;
+
+height:100%;
+
+max-height:420px;
+
+object-fit:cover;
+
+border-radius:30px;
+
+display:block;
+}
+
+
+.after-content{
+
+flex:1 1 400px;
+}
+
+.after-content h2{
+
+font-size:clamp(30px,4vw,42px);
+
+color:#0B5D3B;
+
+margin-bottom:25px;
+}
+
+.after-content p{
+
+font-size:18px;
+
+line-height:2.2;
+
+color:#555;
+
+margin-bottom:35px;
+}
+
+
+.explore-btn{
+
+display:inline-block;
+
+padding:16px 35px;
+
+background:#0B5D3B;
+
+color:white;
+
+text-decoration:none;
+
+border-radius:999px;
+
+font-size:17px;
+
+font-weight:700;
+
+transition:.3s;
+}
+
+.explore-btn:hover{
+
+transform:translateY(-5px);
+
+background:#124c7c;
 }
 
 
@@ -674,31 +1060,50 @@ transform:translateY(-4px);
    معلومات مهمة
 =========================== */
 
-.important-info{
-width:min(1000px,95%);
-margin:35px auto;
-border-radius:30px;
-overflow:hidden;
-background:rgba(255,255,255,.72);
-backdrop-filter:blur(10px);
+.study-notes{
+
+margin:90px 0 40px;
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+
+gap:20px;
 }
 
-.important-head{
+
+.note-box{
+
 background:#0B5D3B;
+
 color:white;
-padding:22px;
+
+border-radius:25px;
+
+padding:30px 25px;
+
+display:flex;
+
+align-items:flex-start;
+
+gap:18px;
+
+box-shadow:0 8px 25px rgba(0,0,0,.06);
+}
+
+.note-box i{
+
 font-size:28px;
-text-align:center;
+
+margin-top:3px;
 }
 
-.important-info ul{
-padding:40px;
-line-height:2.3;
-font-size:17px;
-}
+.note-box p{
 
-.important-info li{
-margin-bottom:15px;
+line-height:2;
+
+font-size:15px;
 }
 
 
@@ -854,7 +1259,6 @@ color:rgba(255,255,255,0.55);
 </head>
 
 <body>
-
 <div class="background-design">
 
 <div class="polygon p1"></div>
@@ -873,7 +1277,6 @@ color:rgba(255,255,255,0.55);
 
 </div>
 <div class="dots-pattern"></div>
-
 <header>
 
 <div class="menu-btn" onclick="openMenu()">
@@ -938,8 +1341,8 @@ onclick="toggleDepartments()"></i>
 <a href="#">مــقررات الــكليــة</a>
 <a href="../ADMSN/ADMSN.html">القــبـــول</a>
 <a href="../TRNSFR/TRNSFR.html">التـحويـل</a>
-<a href="../STUDY/STUDY.html">الــدراســة والخــطــة الــدراســية</a>
-<a href="QSN.html">الأسئلة الأكثر شيوعًا</a>
+<a href="STUDY.html">الــدراســة والخــطــة الــدراســية</a>
+<a href="../QSN/QSN.html">الأسئلة الأكثر شيوعًا</a>
 
 
 
@@ -956,138 +1359,78 @@ onclick="toggleDepartments()"></i>
 
 <div class="content">
 
-<div class="content">
+<!-- ===========================
+     عنوان الصفحة
+=========================== -->
 
-<!-- العنوان -->
+<section class="study-hero">
 
-<section class="faq-hero">
-
-<h1>الأسئلة الشائعة</h1>
+<h1>الدراسة والخطة الدراسية</h1>
 
 <p>
-تهدف هذه الصفحة إلى الإجابة عن أكثر الأسئلة شيوعًا لدى الطلاب المستجدين وتوفير وسيلة مباشرة للتواصل في حال وجود استفسارات إضافية.
+رحلة أكاديمية تجمع بين المعرفة النظرية والخبرة العملية.
 </p>
 
 </section>
 
 
-<!-- الأسئلة الشائعة -->
 
-<section class="faq-section">
+<!-- ===========================
+     الرحلة الأكاديمية
+=========================== -->
 
-<div class="faq-item">
+<section class="journey-section">
 
-<button class="faq-question">
-ما هي شروط القبول في كلية علوم الأرض؟
-<span>+</span>
-</button>
+<div class="journey-card">
 
-<div class="faq-answer">
+<!-- المرحلة المشتركة -->
+
+<div class="journey-stage">
+
+<div class="stage-icon">
+<i class="fa-solid fa-users"></i>
+</div>
+
+<h2>المرحلة المشتركة</h2>
+
+<h3>السنة الأولى والثانية</h3>
+
 <p>
-تخضع شروط القبول لأنظمة وسياسات القبول المعتمدة من الجامعة، ويتم الإعلان عنها رسميًا عبر الجهات المختصة.
+يدرس الطالب خلال هذه المرحلة مقررات مشتركة لجميع طلاب كلية علوم الأرض، بهدف بناء أساس علمي متين في مختلف مجالات علوم الأرض.
 </p>
-</div>
 
 </div>
 
 
+<!-- الطريق -->
 
-<div class="faq-item">
+<div class="journey-road">
 
-<button class="faq-question">
-هل يوجد تحويل إلى الكلية؟
-<span>+</span>
-</button>
+<div class="road-point"></div>
 
-<div class="faq-answer">
+<div class="road-path"></div>
+
+<div class="road-point"></div>
+
+</div>
+
+
+<!-- التخصص -->
+
+<div class="journey-stage">
+
+<div class="stage-icon">
+<i class="fa-solid fa-graduation-cap"></i>
+</div>
+
+<h2>التخصص الأكاديمي</h2>
+
+<h3>السنة الثالثة والرابعة</h3>
+
 <p>
-حتى الآن لا يوجد إعلان رسمي يؤكد فتح باب التحويل إلى كلية علوم الأرض، وينصح بمتابعة الإعلانات الرسمية باستمرار.
+بعد الانتهاء من السنتين المشتركتين، ينتقل الطالب إلى دراسة التخصص الذي اختاره لمدة سنتين إضافيتين، يركز خلالهما على المقررات التخصصية المتقدمة والتطبيقات العملية المرتبطة بمجال التخصص.
 </p>
-</div>
 
-</div>
-
-
-
-<div class="faq-item">
-
-<button class="faq-question">
-كم عدد الأقسام الأكاديمية في الكلية؟
-<span>+</span>
-</button>
-
-<div class="faq-answer">
-<p>
-تضم كلية علوم الأرض عدة أقسام أكاديمية تغطي مختلف مجالات علوم الأرض والتطبيقات المرتبطة بها.
-</p>
-</div>
-
-</div>
-
-
-
-<div class="faq-item">
-
-<button class="faq-question">
-ما هي الخطة الدراسية للكلية؟
-<span>+</span>
-</button>
-
-<div class="faq-answer">
-<p>
-تتضمن الخطة الدراسية مقررات أساسية ومخبرية وميدانية تهدف إلى تأهيل الطالب علميًا وعمليًا في مختلف تخصصات علوم الأرض.
-</p>
-</div>
-
-</div>
-
-
-
-<div class="faq-item">
-
-<button class="faq-question">
-هل تتوفر فرص تدريب ميداني للطلاب؟
-<span>+</span>
-</button>
-
-<div class="faq-answer">
-<p>
-نعم، توفر الكلية العديد من الرحلات والتدريبات الميدانية التي تعزز الجانب التطبيقي لدى الطلاب.
-</p>
-</div>
-
-</div>
-
-
-
-<div class="faq-item">
-
-<button class="faq-question">
-ما هي مجالات العمل المتاحة للخريجين؟
-<span>+</span>
-</button>
-
-<div class="faq-answer">
-<p>
-تتنوع مجالات العمل لتشمل قطاع النفط والطاقة، التعدين، البيئة، الاستشارات الجيولوجية، والمجالات الأكاديمية والبحثية.
-</p>
-</div>
-
-</div>
-
-
-
-<div class="faq-item">
-
-<button class="faq-question">
-كيف يمكنني التواصل مع الكلية للاستفسار؟
-<span>+</span>
-</button>
-
-<div class="faq-answer">
-<p>
-يمكن التواصل مع المسؤولين المختصين من خلال خيارات التواصل الموضحة أدناه.
-</p>
 </div>
 
 </div>
@@ -1096,25 +1439,71 @@ onclick="toggleDepartments()"></i>
 
 
 
-<!-- التواصل -->
+<!-- ===========================
+     المعلومات الأساسية
+=========================== -->
 
-<section class="contact-section">
+<section class="study-info-grid">
 
-<h2>لم تجد إجابة لسؤالك؟</h2>
+<div class="info-card">
+
+<div class="info-icon">
+<i class="fa-regular fa-calendar"></i>
+</div>
+
+<h3>مدة الدراسة</h3>
 
 <p>
-يمكنك التواصل معنا مباشرةً من خلال الخيارات التالية.
+تبلغ مدة الدراسة في كلية علوم الأرض أربع سنوات دراسية، موزعة على ثمانية فصول دراسية.
 </p>
 
-<div class="contact-buttons">
+</div>
 
-<button class="contact-btn" onclick="openModal('maleModal')">
-طلاب
-</button>
 
-<button class="contact-btn" onclick="openModal('femaleModal')">
-طالبات
-</button>
+
+<div class="info-card">
+
+<div class="info-icon">
+<i class="fa-regular fa-clock"></i>
+</div>
+
+<h3>عدد الساعات المطلوبة</h3>
+
+<p>
+يجب على الطالب إكمال جميع الساعات المعتمدة المحددة في الخطة الدراسية للبرنامج من أجل التخرج والحصول على درجة البكالوريوس.
+</p>
+
+</div>
+
+
+
+<div class="info-card">
+
+<div class="info-icon">
+<i class="fa-solid fa-book-open"></i>
+</div>
+
+<h3>طبيعة الدراسة</h3>
+
+<p>
+تجمع الدراسة في كلية علوم الأرض بين الجانبين النظري والعملي من خلال المحاضرات العلمية، والمختبرات، والتطبيقات الميدانية.
+</p>
+
+</div>
+
+
+
+<div class="info-card">
+
+<div class="info-icon">
+<i class="fa-solid fa-layer-group"></i>
+</div>
+
+<h3>التخصص الأكاديمي</h3>
+
+<p>
+بعد السنتين المشتركتين، ينتقل الطالب إلى دراسة المقررات التخصصية المتقدمة وفق المسار الأكاديمي المختار.
+</p>
 
 </div>
 
@@ -1122,113 +1511,185 @@ onclick="toggleDepartments()"></i>
 
 
 
-<!-- نافذة الطلاب -->
+<!-- ===========================
+     طبيعة الدراسة
+=========================== -->
 
-<div class="modal-overlay" id="maleModal">
+<section class="study-type">
 
-<div class="modal-box">
+<h2 class="section-title">
+طبيعة الدراسة
+</h2>
 
-<div class="modal-title">
-استفسارات الطلاب
+<div class="study-type-grid">
+
+<div class="type-card">
+
+<img src="lecture.jpg">
+
+<h3>المحاضرات العلمية</h3>
+
 </div>
 
-<button class="close-btn"
-onclick="closeModal('maleModal')">
-×
-</button>
 
-<img src="MOH.PNG"
-class="modal-avatar">
 
-<h3>أ. محمد خبراني</h3>
+<div class="type-card">
 
-<h4>جيولوجي ثروة معدنية و صخور </h4>
+<img src="lab.jpg">
 
-<p>mohakhbr@gmail.com</p>
+<h3>المختبرات والتجارب العملية</h3>
 
-<p>Telegram:@mokhk22</p>
+</div>
 
-<a href="mailto:mohakhbr@gmail.com"
-class="email-btn">
 
-إرسال بريد إلكتروني
+
+<div class="type-card">
+
+<img src="field.jpg">
+
+<h3>الرحلات والدراسات الحقلية</h3>
+
+</div>
+
+
+
+<div class="type-card">
+
+<img src="maps.jpg">
+
+<h3>إعداد الخرائط والتقارير الجيولوجية</h3>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ===========================
+     المهارات المكتسبة
+=========================== -->
+
+<section class="skills-section">
+
+<h2 class="section-title">
+أبرز المهارات التي يكتسبها الطالب
+</h2>
+
+<div class="skills-line">
+
+<div class="skill-box">
+<i class="fa-solid fa-gem"></i>
+<p>التعرف على الصخور والمعادن وتصنيفها</p>
+</div>
+
+<div class="skill-box">
+<i class="fa-solid fa-map"></i>
+<p>قراءة وإعداد الخرائط الجيولوجية</p>
+</div>
+
+<div class="skill-box">
+<i class="fa-solid fa-globe"></i>
+<p>استخدام نظم المعلومات الجغرافية (GIS)</p>
+</div>
+
+<div class="skill-box">
+<i class="fa-solid fa-satellite"></i>
+<p>تطبيق تقنيات الاستشعار عن بعد</p>
+</div>
+
+<div class="skill-box">
+<i class="fa-solid fa-chart-column"></i>
+<p>جمع وتحليل البيانات الحقلية</p>
+</div>
+
+<div class="skill-box">
+<i class="fa-solid fa-file-lines"></i>
+<p>إعداد التقارير الفنية</p>
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ===========================
+     ماذا بعد المرحلة المشتركة
+=========================== -->
+
+<section class="after-common">
+
+<div class="after-image">
+
+<img src="specialization.jpg">
+
+</div>
+
+
+<div class="after-content">
+
+<h2>
+ماذا بعد المرحلة المشتركة؟
+</h2>
+
+<p>
+بعد الانتهاء من السنتين المشتركتين، ينتقل الطالب إلى دراسة التخصص الذي اختاره لمدة سنتين إضافيتين، يركز خلالهما على المقررات التخصصية المتقدمة والتطبيقات العملية المرتبطة بمجال التخصص.
+</p>
+
+<a href="../DEP/DEP.html"
+class="explore-btn">
+
+استكشف الأقسام الأكاديمية
 
 </a>
 
 </div>
 
-</div>
+</section>
 
 
 
-<!-- نافذة الطالبات -->
+<!-- ===========================
+     معلومات مهمة
+=========================== -->
 
-<div class="modal-overlay" id="femaleModal">
+<section class="study-notes">
 
-<div class="modal-box">
+<div class="note-box">
 
-<div class="modal-title">
-استفسارات الطالبات
-</div>
+<i class="fa-solid fa-circle-info"></i>
 
-<button class="close-btn"
-onclick="closeModal('femaleModal')">
-×
-</button>
-
-<img src="RE.PNG"
-class="modal-avatar">
-
-<h3>أ. ريتال عبدالمنان</h3>
-
-<h4>جيولوجية</h4>
-
-<p>remannan@outlook.sa</p>
-
-<p>Telegram:@rixieyl</p>
-
-<a href="mailto:remannan@outlook.sa"
-class="email-btn">
-
-إرسال بريد إلكتروني
-
-</a>
-
-</div>
-
-</div>
-
-
-
-<!-- معلومات مهمة -->
-
-<section class="important-info">
-
-<div class="important-head">
-معلومات مهمة
-</div>
-
-<ul>
-
-<li>
+<p>
 جميع المعلومات الواردة في هذه الصفحة هي لأغراض إرشادية فقط.
-</li>
-
-<li>
-قد تخضع المعلومات للتحديث وفق ما يصدر رسميًا من الكلية أو الجامعة.
-</li>
-
-<li>
-في حال وجود استفسارات إضافية، يرجى التواصل مع المسؤولين المختصين.
-</li>
-
-</ul>
-
-</section>
+</p>
 
 </div>
 
 
+<div class="note-box">
+
+<i class="fa-solid fa-arrows-rotate"></i>
+
+<p>
+قد تخضع المعلومات للتحديث وفق ما يصدر رسميًا من الكلية أو الجامعة.
+</p>
+
+</div>
+
+
+<div class="note-box">
+
+<i class="fa-solid fa-envelope"></i>
+
+<p>
+في حال وجود استفسارات إضافية يرجى التواصل مع المسؤولين المختصين.
+</p>
+
+</div>
+
+</section>
 </div>
 
 <footer>
@@ -1282,66 +1743,6 @@ menu.style.display="block";
 }
 }
 
-
-/* Accordion */
-
-const questions =
-document.querySelectorAll(".faq-question");
-
-questions.forEach(question=>{
-
-question.addEventListener("click",()=>{
-
-const answer =
-question.nextElementSibling;
-
-const icon =
-question.querySelector("span");
-
-if(answer.style.maxHeight){
-
-answer.style.maxHeight = null;
-
-icon.textContent = "+";
-}
-else{
-
-answer.style.maxHeight =
-answer.scrollHeight + "px";
-
-icon.textContent = "−";
-}
-
-});
-
-});
-
-
-/* Modal */
-
-function openModal(id){
-document.getElementById(id).style.display="flex";
-}
-
-function closeModal(id){
-document.getElementById(id).style.display="none";
-}
-
-
-/* Close Modal Outside */
-
-window.addEventListener("click",function(e){
-
-document.querySelectorAll(".modal-overlay")
-.forEach(function(modal){
-
-if(e.target===modal){
-modal.style.display="none";
-}
-
-});
-
-});
 
 </script>
 

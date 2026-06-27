@@ -555,12 +555,11 @@ object-fit:contain;
 
 .journey-image{
 grid-area:empty;
-width:100%;
-height:100%;
 display:flex;
-justify-content:center;
-align-items:flex-start;
-padding-top:180px;
+flex-direction:column;
+align-items:center;
+gap:80px;
+padding-top:50px;
 }
 
 .journey-image img{
@@ -568,17 +567,25 @@ width:100%;
 height:100%;
 max-height:clamp(240px,29vw,400px);
 object-fit:contain;
+margin-bottom:-80px;
 }
 
+.road-rock{
+margin
+display:flex;
+justify-content:center;
+}
+
+.road-rock img{
+width:clamp(180px,25vw,320px);
+height:auto;
+object-fit:contain;
+}
 
 .year-two{
-grid-area:second;
-justify-self:end;
-align-self:center;
 width:100%;
 max-width:100%;
-transform:translate(5px,-80px);
-margin-top:clamp(-350px,-28vw,-500px);
+align-self:center;
 }
 
 .year-title{
@@ -720,7 +727,7 @@ grid-column:1 / -1;
 width:100%;
 max-width:100%;
 overflow:hidden;
-margin-top:-80px;
+margin-top:-20px;
 }
 
 .support-card{
@@ -1097,6 +1104,7 @@ onclick="toggleDepartments()"></i>
 <a href="#">مــقررات الــكليــة</a>
 <a href="../ADMSN/ADMSN.html">القــبـــول</a>
 <a href="../TRNSFR/TRNSFR.html">التـحويـل</a>
+<a href="../STUDY/STUDY.html">الــدراســة والخــطــة الــدراســية</a>
 <a href="../QSN/QSN.html">الأسئلة الأكثر شيوعًا</a>
 
 <div class="sidebar-bottom-links">
@@ -1159,23 +1167,23 @@ onclick="toggleDepartments()"></i>
 </div>
 
 <button class="year-btn"
-onclick="openModal('عنوان','#محتوى.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
-اسم
+onclick="openModal('جيولوجيا طبيعية (1)','دراسة أساسيات علم الأرض، مثل نشأة الأرض، المعادن، الصخور، الصفائح التكتونية، والبراكين والزلازل.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+جيولوجيا طبيعية
 </button>
 
 <button class="year-btn"
-onclick="openModal('عنوان','#محتوى.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
-اسم
+onclick="openModal('اللغة الإنجليزية (1) - علمي ','تطوير مهارات اللغة الإنجليزية الأكاديمية والمصطلحات العلمية المستخدمة في علوم الأرض.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+اللغة الإنجليزية 
 </button>
 
 <button class="year-btn"
-onclick="openModal('عنوان','#محتوى.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
-اسم
+onclick="openModal('الفيزياء العامة','دراسة مبادئ الميكانيكا والكهرباء والطاقة وتطبيقاتها في العلوم الطبيعية.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+الفيزياء العامة
 </button>
 
 <button class="year-btn"
-onclick="openModal('عنوان','#محتوى.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
-اسم
+onclick="openModal('اللغة العربية ','#محتوى.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+اللغة العربية
 </button>
 
 <div class="semester-title">
@@ -1183,36 +1191,47 @@ onclick="openModal('عنوان','#محتوى.<br><br><a href=&quot;#.html&quot; 
 </div>
 
 <button class="year-btn"
-onclick="openModal('عنوان','#محتوى.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
-اسم
-</button>
-<button class="year-btn"
-onclick="openModal('عنوان','#محتوى.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
-اسم
+onclick="openModal('جيولوجيا طبيعية (2)','استكمال لمفاهيم الجيولوجيا العامة مع التركيز على تاريخ الأرض، العمليات الجيولوجية، والموارد الطبيعية.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+جيولوجيا طبيعية
 </button>
 
 <button class="year-btn"
-onclick="openModal('عنوان','#محتوى.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
-اسم
+onclick="openModal('اللغة الإنجليزية (2) - علمي','تطوير مهارات اللغة الإنجليزية الأكاديمية والمصطلحات العلمية المستخدمة في علوم الأرض.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+اللغة الإنجليزية 
 </button>
 
 <button class="year-btn"
-onclick="openModal('عنوان','#محتوى.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
-اسم
+onclick="openModal('الرياضيات العامة','دراسة التفاضل والتكامل والجبر والرياضيات الأساسية المستخدمة في التحليل العلمي.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+الرياضيات العامة
+</button>
+
+<button class="year-btn"
+onclick="openModal('بصريات المعادن','دراسة المعادن باستخدام المجهر المستقطب للتعرف على خواصها البصرية وتشخيصها..<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+بصريات المعادن
+</button>
+
+<button class="year-btn"
+onclick="openModal('الثقافة الإسلامية (1)','دراسة المفاهيم والقيم الإسلامية وربطها بالجوانب العلمية والمجتمعية.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+الثقافة الإسلامية
 </button>
 
 </div>
 </div>
 
 <div class="journey-road">
+
 <img src="ARROW.PNG" alt="Academic Journey Road">
+
+<div class="road-rock">
+<img src="ROCK.PNG" alt="">
+</div>
+
 </div>
 
 </div>
 
 <div class="journey-image">
-<img src="ROCK.PNG" alt="">
-</div>
+<img src="ROCK2.PNG" alt="">
 <div class="year-box year-two">
 
 <div class="year-title">
@@ -1225,23 +1244,34 @@ onclick="openModal('عنوان','#محتوى.<br><br><a href=&quot;#.html&quot; 
 الفصل الدراسي الأول
 </div>
 <button class="year-btn"
-onclick="openModal('عنوان','#محتوى.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
-اسم
+onclick="openModal('علم الرسوبيات والأحافير','دراسة تكوين الرواسب والصخور الرسوبية، وطرق ترسيبها، والأحافير واستخدامها في تفسير البيئات الجيولوجية.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+علم الرسوبيات والأحافير
 </button>
 
 <button class="year-btn"
-onclick="openModal('عنوان','#محتوى.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
-اسم
+onclick="openModal('الصخور النارية والمتحولة','دراسة نشأة الصخور النارية والمتحولة، وتصنيفها، وتركيبها المعدني، والعمليات التي تؤدي إلى تكوينها.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+الصخور النارية والمتحولة
 </button>
 
 <button class="year-btn"
-onclick="openModal('عنوان','#محتوى.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
-اسم
+onclick="openModal('جيولوجيا بنائية','دراسة تشوهات القشرة الأرضية مثل الطيات والفوالق والفواصل وتحليل الإجهادات والحركات التكتونية.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+جيولوجيا بنائية 
 </button>
 
 <button class="year-btn"
-onclick="openModal('عنوان','#محتوى.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
-اسم
+onclick="openModal('جيوفيزياء','تطبيق المبادئ الفيزيائية لدراسة باطن الأرض واستكشاف التراكيب والموارد باستخدام الطرق الجيوفيزيائية.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+جيوفيزياء
+
+</button>
+
+<button class="year-btn"
+onclick="openModal('اللغة العربية (2)','#محتوى.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+اللغة العربية
+</button>
+
+<button class="year-btn"
+onclick="openModal('الكيمياء العامة','دراسة تركيب المادة، التفاعلات الكيميائية، والروابط والعناصر كأساس لفهم العمليات الجيولوجية.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+الكيمياء العامة
 </button>
 
 <div class="semester-title">
@@ -1249,24 +1279,40 @@ onclick="openModal('عنوان','#محتوى.<br><br><a href=&quot;#.html&quot; 
 </div>
 
 <button class="year-btn"
-onclick="openModal('عنوان','#محتوى.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
-اسم
-</button>
-<button class="year-btn"
-onclick="openModal('عنوان','#محتوى.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
-اسم
+onclick="openModal('الإحصاء العام ','استخدام الأساليب الإحصائية لتحليل البيانات الجيولوجية وتفسير النتائج.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+الإحصاء العام
 </button>
 
 <button class="year-btn"
-onclick="openModal('عنوان','#محتوى.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
-اسم
+onclick="openModal('الصخور الرسوبية','دراسة أنواع الصخور الرسوبية، مكوناتها، وطرق تكوينها وتصنيفها وتفسير بيئات الترسيب.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+الصخور الرسوبية
 </button>
 
 <button class="year-btn"
-onclick="openModal('عنوان','#محتوى.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
-اسم
+onclick="openModal('الخرائط الجيولوجية','تعلم قراءة وإعداد وتفسير الخرائط الجيولوجية وربطها بالتراكيب والصخور في الميدان.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+الخرائط الجيولوجية
 </button>
 
+<button class="year-btn"
+onclick="openModal('الجيولوجيا الحقلية','تطبيق عملي في المواقع الجيولوجية يشمل رسم الخرائط، ووصف الصخور، وقياس التراكيب، وجمع العينات وكتابة الملاحظات.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+الجيولوجيا الحقلية
+</button>
+
+<button class="year-btn"
+onclick="openModal('نظم المعلومات الجغرافية والاستشعار عن بعد','استخدام نظم المعلومات الجغرافية وصور الأقمار الصناعية لتحليل البيانات المكانية وإنتاج الخرائط ودعم الدراسات الجيولوجية.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+نظم المعلومات الجغرافية والاستشعار عن بعد</button>
+
+<button class="year-btn"
+onclick="openModal('كتابة التقارير الجيولوجية','تعلم إعداد التقارير العلمية والفنية الخاصة بالأعمال الحقلية وتحليل النتائج وعرضها بطريقة احترافية.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+كتابة التقارير الجيولوجية
+</button>
+
+<button class="year-btn"
+onclick="openModal('البرمجة وحل المشكلات','تعلم أساسيات البرمجة والتفكير المنطقي لتطوير حلول للمشكلات العلمية وتحليل البيانات.<br><br><a href=&quot;#.html&quot; target=&quot;_blank&quot; class=&quot;modal-link-btn&quot;>انتقل إلى معلومات المقرر</a>')">
+البرمجة وحل المشكلات
+</button>
+
+</div>
 </div>
 </div>
 
