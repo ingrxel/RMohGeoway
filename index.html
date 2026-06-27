@@ -1150,7 +1150,6 @@ if(
 ){
 sidebar.classList.remove("active");
 }
-
 });
 
 function toggleDepartments(){
@@ -1398,7 +1397,6 @@ keywords:[
 "الاستشعار"
 ]
 }
-
 ];
 
 const searchInput =
@@ -1407,46 +1405,31 @@ document.getElementById("searchInput");
 const suggestionsBox =
 document.getElementById("searchSuggestions");
 
-
 searchInput.addEventListener("input",()=>{
 
 const value =
 searchInput.value
 .trim()
 .toLowerCase();
-
 suggestionsBox.innerHTML="";
 
-
 if(value===""){
-
 suggestionsBox.style.display="none";
-
 return;
-
 }
 
-
 const results = searchDatabase.filter(page=>{
-
 const allText =
-
 page.title.toLowerCase()+" "+
-
 page.keywords.join(" ").toLowerCase();
 
-
 return allText.includes(value) ||
-
 value.split(" ").some(word=>
-
 allText.includes(word));
-
 });
 
 
 if(results.length===0){
-
 suggestionsBox.innerHTML=`
 
 <div class="suggestion-item">
@@ -1456,47 +1439,29 @@ suggestionsBox.innerHTML=`
 </div>`;
 
 suggestionsBox.style.display="block";
-
 return;
-
 }
-
 
 results.forEach(page=>{
 
 const item =
-
 document.createElement("div");
-
 item.className="suggestion-item";
-
 item.innerHTML = page.title;
-
 item.onclick=()=>{
-
 window.location.href = page.url;
-
 };
 
 suggestionsBox.appendChild(item);
-
 });
-
 
 suggestionsBox.style.display="block";
-
 });
 
-
-
 document.addEventListener("click",(e)=>{
-
 if(!e.target.closest(".search-box")){
-
 suggestionsBox.style.display="none";
-
 }
-
 });
 
 </script>
